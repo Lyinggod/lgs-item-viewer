@@ -28,7 +28,9 @@ Drag and Drop rows to set the tab order.
 
 ### Item Configuration
 
-Items and their fields must be defined.
+Items and their fields must be defined. 
+
+_**USE BAR BRAWL**_
 
 **Define Fields** button: Each item that is to be displayed in the viewer must be defined and have its fields assigned.
 
@@ -75,11 +77,15 @@ Folder in compendiums are used to assist in filtering display
 
 **Filter by Folder** - Checking a checkbox will show only items associated with that folder.
 
+**Lock Button** - Click to unlocke additional options
+
 - **Folder Order** - Folders may be re-ordered within their folder level and group via the lock button and using drag and drop. You cannot move a subfolder out from under its parent folder (1 level higher).
+- **Hide Folders** - Folders may be hidden from players. Clicking the grey ban symbol will hide a folder, and any subfolders, from player view. 
 
 **Filter by Tags** - If the module _Item Tags_ is used, items also be sorted by tags.
 
 **Search** - Live search using a partial, multiple word search; "cat" will show "cat", "catch", "scatter". "cat" and "bug" will show only show items that have words that contain both these groups of text.
+
 
 ### Table View
 
