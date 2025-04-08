@@ -46,9 +46,10 @@ Folder in compendiums are used to assist in filtering display
 - Filters are based on the folders inside compendiums and appear, by default, alphabetically by name.
 - Drag and drop can be used to re-order folders within the level. Example _Armor_ and _Weapons_ can be re-ordered but cannot be moved outside of _Adventurer_.
 4. **Filter by Folder** - check to see only items contain in that folder
-5. **Live Search Field** - Searches items display from filaters as you type using partial word match. Searching "Cat" "_Cat_ch". Multiple words can be used; e.g. "magic sword"
-6. **Table Hidden From Player** - Player hidden tables are collapsed and still accessible by the GM. This is set in #2.
-7. **Item Icon** - Click to view sheet or drag to actor. Dragging Journals and non-actor compatible items will have not affect.
+5. **Filter by Tag** - If using the _Item Tags_ module, the tags will appear here.
+6. **Live Search Field** - Searches items display from filaters as you type using partial word match. Searching "Cat" "_Cat_ch". Multiple words can be used; e.g. "magic sword"
+7. **Table Hidden From Player** - Player hidden tables are collapsed and still accessible by the GM. This is set in #2.
+8. **Item Icon** - Click to view sheet or drag to actor. Dragging Journals and non-actor compatible items will have not affect.
 
 **Table Configuration**
 
@@ -69,8 +70,43 @@ This dialog is used to configure the appearance of tables
 - **Move** - Change relative position of table compared to other tables in the tab. Changed _Group Items by Folder_ resets this to original position. This functions in real time.
   - Use _Hide Folder Rows_ in _Temporary Settings_ section to hide table rows to make changing row positions easier to see.
 
+## Item Viewer Journal
 
-## Journals Notes
+The Item Viewer Journal contains the page displayed in the _Info_ tab and pages for Journal pills. The page for the _Info_ tab must be named "Player Message".
+
+## Journals Pills
+
+<img src="https://github.com/Lyinggod/lgs-item-viewer/blob/main/images/journal-pills.jpg" width=400>
+
+Journal pills are buttons that will show journals relating to folder names or tags. 
+
+To create a journal pill use the following formats. 
+
+Using _Groups Items by Folder_ in _Table Configuration_ dialog affects the format:
+
+- _Group Items by Type_: Checked
+  - {Tag Name from Filter List} (tag) ({OriginalItemType}-folder-{Folder-Name-with-hyphens})
+  - {Folder Name from Filter List} ({OriginalItemType}-folder-{SanitizedTopLevelFolderName})
+- _Group Items by Type_: Unchecked
+  - {Tag Name from Filter List} (tag) (OriginalItemType)
+  - {Folder Name from Filter List} ({OriginalItemType})
+
+- _Tag Name_: Name of the tag as defined via the _Item Tags_ module. It can be multiple words
+- _(tag)_:  This must be as shown and defines that a page is for a tag and not a folder.
+- _OriginalItemType_: The item type of the item. This same as the default table name for the item type
+- _-folder-_: This must be exactly folder, including dashes.
+- _Folder-Name-with-hyphens_: The name of the folder seen under _Filter by Folder_, with spaces replaced with hyphens. Therefore if the folder name is _Combat Kits_, this would be _Combat-Kits_.
+
+
+Example of creating journal entry for the tag _Kit_ for items in the _Kits_ Folder that are of item type "gear".
+
+_Group Items by Type_: Checked
+Kit (tag) (gear-folder-Kits)
+- Bulky (tag) (gear-folder-Armor)
+- Bulky (tag) (gear-folder-Armor)
+- Bulky (tag) (gear-folder-Armor)
+
+
 
 ## Viewing journals as items
 
