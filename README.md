@@ -25,7 +25,7 @@ Before the item viewer can be used, it must be configured by assigning a tab nam
 - **+**: Add a new tab row
 - **Tab Name**: The name of the tab as shown in the viewer.
 - **Folder Name**: The name of the folder, inside the _Item Viewer_ Folder that is associated with the tab.
-- **Hide**: Hides the tab from players. The tab name will have a ban icon next to it.
+- **Hide Tab**: Hides the tab from players. The tab name will have a ban icon next to it in GM view.
 - **Export Button**: Shows a dialog that contains the saved tab information.
 - **Import Button**: Creates a dialog that allowed the exported data to be pasted into.
 - **Tab Header**: Reveals a text field to add text or HTML that will appear at the top of the tab.
@@ -34,7 +34,7 @@ Drag and Drop rows to set the tab order.
 
 ### Item Configuration
 
-Due to the agnostic nature of the viewer, tab names as well as all items and actor item types, as well as journals, must be defined in the module.
+Due to the agnostic nature of the viewer, tab names as well as items that will be view must be defined in the module.
 
 For the purposes of this module, an item is considered to be any actor or item such as PC or a weapon, or journal.
 
@@ -79,7 +79,7 @@ _Macro Example_
 
 If a path is incorrect, the value _field?_ will be shown. 
 
-**Journals**
+## **Journals**
 
 Journals only have one field, _Name_. Other fields that are automatically added should be deleted.
 
@@ -91,7 +91,7 @@ Rows in the _Configure Fields_ dialog may be dragged and dropped to determine th
 
 ## Compatible systems
 
-Some fields require special coding to be seen correctly because they are stored in array or similar issues.  It may also be desired to add special text into the description. In the following example, additional code was added to display attributes in the description as a table:
+Some fields require special coding to be seen correctly because of how they are stored. If a desired field does not appear in the Fields macro, this may be the case.  It may also be desired to add special text into the description. In the following example, additional code was added to display attributes in the description as a table:
 
 <img src="https://github.com/Lyinggod/lgs-item-viewer/blob/main/images/custom-desc-example.jpg" width=400>
 
