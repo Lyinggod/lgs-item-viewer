@@ -1,0 +1,381 @@
+[
+  {
+    "type": "species",
+    "fields": [
+      {
+        "name": "TheName",
+        "object": "name",
+        "sortIndex": "1"
+      },
+      {
+        "name": "Description",
+        "object": "system.description",
+        "sortIndex": ""
+      }
+    ]
+  },
+  {
+    "type": "ability",
+    "fields": [
+      {
+        "name": "AName",
+        "object": "name",
+        "sortIndex": ""
+      },
+      {
+        "name": "Description",
+        "object": "system.description",
+        "sortIndex": ""
+      }
+    ]
+  },
+  {
+    "type": "weapon",
+    "fields": [
+      {
+        "name": "Name",
+        "object": "name",
+        "sortIndex": "1",
+        "alignLeft": true
+      },
+      {
+        "name": "Skill",
+        "object": "system.skill.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "Dam",
+        "object": "system.damage.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "Crit",
+        "object": "system.crit.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "Range",
+        "object": "system.range.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "HP",
+        "object": "system.hardpoints.adjusted",
+        "sortIndex": ""
+      },
+      {
+        "name": "Enc",
+        "object": "system.encumbrance.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "Price",
+        "object": "system.price.adjusted",
+        "sortIndex": ""
+      },
+      {
+        "name": "Rarity",
+        "object": "system.rarity.adjusted",
+        "sortIndex": ""
+      },
+      {
+        "name": "Description",
+        "object": "system.description",
+        "sortIndex": ""
+      },
+      {
+        "name": "Special",
+        "object": "system.adjusteditemmodifier",
+        "sortIndex": "",
+        "alignLeft": true
+      }
+    ]
+  },
+  {
+    "type": "talent",
+    "fields": [
+      {
+        "name": "Name",
+        "object": "name",
+        "sortIndex": "2"
+      },
+      {
+        "name": "Description",
+        "object": "system.description",
+        "sortIndex": ""
+      },
+      {
+        "name": "Tier",
+        "object": "system.tier",
+        "sortIndex": "1"
+      },
+      {
+        "name": "Ranked",
+        "object": "system.ranks.ranked",
+        "sortIndex": ""
+      },
+      {
+        "name": "Activation",
+        "object": "system.activation.value",
+        "sortIndex": ""
+      }
+    ]
+  },
+  {
+    "type": "career",
+    "fields": [
+      {
+        "name": "Name",
+        "object": "name",
+        "sortIndex": "1"
+      },
+      {
+        "name": "Description",
+        "object": "system.description",
+        "sortIndex": ""
+      }
+    ]
+  },
+  {
+    "type": "itemattachment",
+    "fields": [
+      {
+        "name": "Name",
+        "object": "name",
+        "sortIndex": "1",
+        "alignLeft": true
+      },
+      {
+        "name": "Price",
+        "object": "system.price.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "Hard Points",
+        "object": "system.hardpoints.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "Rarity",
+        "object": "system.rarity.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "Enc",
+        "object": "system.encumbrance.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "Description",
+        "object": "system.description",
+        "sortIndex": ""
+      }
+    ]
+  },
+  {
+    "type": "gear",
+    "fields": [
+      {
+        "name": "Name",
+        "object": "name",
+        "sortIndex": "1",
+        "alignLeft": true
+      },
+      {
+        "name": "Price",
+        "object": "system.price.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "Rarity",
+        "object": "system.rarity.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "Enc",
+        "object": "system.encumbrance.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "Description",
+        "object": "system.description",
+        "sortIndex": ""
+      }
+    ]
+  },
+  {
+    "type": "itemmodifier",
+    "fields": [
+      {
+        "name": "Name",
+        "object": "name",
+        "sortIndex": "1",
+        "alignLeft": true
+      },
+      {
+        "name": "Description",
+        "object": "system.description",
+        "sortIndex": ""
+      }
+    ]
+  },
+  {
+    "type": "armour",
+    "fields": [
+      {
+        "name": "Name",
+        "object": "name",
+        "sortIndex": "",
+        "alignLeft": true
+      },
+      {
+        "name": "Soak",
+        "object": "system.soak.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "Def",
+        "object": "system.defence.adjusted",
+        "sortIndex": ""
+      },
+      {
+        "name": "Price",
+        "object": "system.price.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "rarity",
+        "object": "system.rarity.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "HP",
+        "object": "system.hardpoints.adjusted",
+        "sortIndex": ""
+      },
+      {
+        "name": "Enc",
+        "object": "system.encumbrance.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "Special",
+        "object": "system.adjusteditemmodifier",
+        "sortIndex": "",
+        "alignLeft": true
+      },
+      {
+        "name": "Description",
+        "object": "system.description",
+        "sortIndex": ""
+      }
+    ]
+  },
+  {
+    "type": "vehicle",
+    "fields": [
+      {
+        "name": "Name",
+        "object": "name",
+        "sortIndex": "1",
+        "alignLeft": true
+      },
+      {
+        "name": "Skill",
+        "object": "flags.lgs-sw-ffg-enhancements.extraStats.Control_Skill.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "Description",
+        "object": "system.biography",
+        "sortIndex": ""
+      },
+      {
+        "name": "Armor",
+        "object": "system.attributes.Armour.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "Hndl",
+        "object": "system.attributes.Handling.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "Def",
+        "object": "system.attributes.Shields.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "HT",
+        "object": "system.attributes.Hulltrauma.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "SS",
+        "object": "system.attributes.Systemstrain.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "Spd",
+        "object": "system.attributes.Speed.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "Sil.",
+        "object": "system.attributes.Silhouette.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "Cost",
+        "object": "system.stats.cost.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "Rarity",
+        "object": "system.stats.rarity.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "HP",
+        "object": "system.stats.customizationHardPoints.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "Enc Cap",
+        "object": "system.stats.encumbrance.max",
+        "sortIndex": ""
+      },
+      {
+        "name": "Pass.",
+        "object": "system.stats.passengerCapacity.value",
+        "sortIndex": ""
+      }
+    ]
+  },
+  {
+    "type": "journal",
+    "fields": [
+      {
+        "name": "Name",
+        "object": "name",
+        "sortIndex": ""
+      }
+    ]
+  },
+  {
+    "type": "shipattachment",
+    "fields": [
+      {
+        "name": "Name",
+        "object": "name",
+        "sortIndex": "1",
+        "alignLeft": true
+      },
+      {
+        "name": "Description",
+        "object": "system.description",
+        "sortIndex": ""
+      }
+    ]
+  }
+]

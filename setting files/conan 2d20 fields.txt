@@ -1,0 +1,550 @@
+[
+  {
+    "type": "kit",
+    "fields": [
+      {
+        "name": "Name",
+        "object": "name",
+        "sortIndex": "1",
+        "alignLeft": true
+      },
+      {
+        "name": "Availability",
+        "object": "system.availability",
+        "sortIndex": ""
+      },
+      {
+        "name": "Cost",
+        "object": "system.cost",
+        "sortIndex": ""
+      },
+      {
+        "name": "Enc.",
+        "object": "system.encumbrance",
+        "sortIndex": ""
+      },
+      {
+        "name": "Skill",
+        "object": "system.skill",
+        "sortIndex": ""
+      },
+      {
+        "name": "Kit Type",
+        "object": "system.kitType",
+        "sortIndex": ""
+      },
+      {
+        "name": "Uses",
+        "object": "system.uses.max",
+        "sortIndex": ""
+      },
+      {
+        "name": "Description",
+        "object": "system.description.value",
+        "sortIndex": ""
+      }
+    ]
+  },
+  {
+    "type": "Weapon",
+    "fields": [
+      {
+        "name": "Description",
+        "object": "system.description.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "Name",
+        "object": "name",
+        "sortIndex": "1",
+        "alignLeft": true
+      },
+      {
+        "name": "Skill",
+        "object": "system.skillOverride",
+        "sortIndex": ""
+      },
+      {
+        "name": "Avail.",
+        "object": "system.availability",
+        "sortIndex": ""
+      },
+      {
+        "name": "Cost",
+        "object": "system.cost",
+        "sortIndex": ""
+      },
+      {
+        "name": "Dam.",
+        "object": "system.damage.dice",
+        "sortIndex": ""
+      },
+      {
+        "name": "Dam.Type",
+        "object": "system.damage.type",
+        "sortIndex": ""
+      },
+      {
+        "name": "Enc",
+        "object": "system.encumbrance",
+        "sortIndex": ""
+      },
+      {
+        "name": "Rng/Rch",
+        "object": "system.range",
+        "sortIndex": ""
+      },
+      {
+        "name": "Shots",
+        "object": "system.shots",
+        "sortIndex": ""
+      },
+      {
+        "name": "Size",
+        "object": "system.size",
+        "sortIndex": ""
+      },
+      {
+        "name": "WeapType",
+        "object": "system.weaponType",
+        "sortIndex": ""
+      },
+      {
+        "name": "Qualities",
+        "object": "system.qualities.value",
+        "sortIndex": "",
+        "alignLeft": true
+      }
+    ]
+  },
+  {
+    "type": "armor",
+    "fields": [
+      {
+        "name": "Name",
+        "object": "name",
+        "sortIndex": "1",
+        "alignLeft": true
+      },
+      {
+        "name": "Avail",
+        "object": "system.availability",
+        "sortIndex": ""
+      },
+      {
+        "name": "Enc.",
+        "object": "system.encumbrance",
+        "sortIndex": ""
+      },
+      {
+        "name": "Cost",
+        "object": "system.cost",
+        "sortIndex": ""
+      },
+      {
+        "name": "Soak",
+        "object": "system.soak",
+        "sortIndex": ""
+      },
+      {
+        "name": "Qualities",
+        "object": "system.qualities.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "Coverage",
+        "object": "system.coverage.value",
+        "sortIndex": "",
+        "alignLeft": true
+      },
+      {
+        "name": "Description",
+        "object": "system.description.value",
+        "sortIndex": ""
+      }
+    ]
+  },
+  {
+    "type": "miscellaneous",
+    "fields": [
+      {
+        "name": "Name",
+        "object": "name",
+        "sortIndex": "1",
+        "alignLeft": true
+      },
+      {
+        "name": "Avail.",
+        "object": "system.availability",
+        "sortIndex": ""
+      },
+      {
+        "name": "Cost",
+        "object": "system.cost",
+        "sortIndex": ""
+      },
+      {
+        "name": "Enc.",
+        "object": "system.encumbrance",
+        "sortIndex": ""
+      },
+      {
+        "name": "Description",
+        "object": "system.description.value",
+        "sortIndex": ""
+      }
+    ]
+  },
+  {
+    "type": "transportation",
+    "fields": [
+      {
+        "name": "Name",
+        "object": "name",
+        "sortIndex": "1",
+        "alignLeft": true
+      },
+      {
+        "name": "Avail.",
+        "object": "system.availability",
+        "sortIndex": ""
+      },
+      {
+        "name": "Cost",
+        "object": "system.cost",
+        "sortIndex": ""
+      },
+      {
+        "name": "Cats.",
+        "object": "system.categories",
+        "sortIndex": ""
+      },
+      {
+        "name": "Cat",
+        "object": "system.category",
+        "sortIndex": ""
+      },
+      {
+        "name": "Pass.",
+        "object": "system.passengers.capacity",
+        "sortIndex": ""
+      },
+      {
+        "name": "Stowage",
+        "object": "system.stowage.max",
+        "sortIndex": ""
+      },
+      {
+        "name": "Type",
+        "object": "system.transpoType",
+        "sortIndex": ""
+      },
+      {
+        "name": "Description",
+        "object": "system.description.value",
+        "sortIndex": ""
+      }
+    ]
+  },
+  {
+    "type": "journal",
+    "fields": [
+      {
+        "name": "Name",
+        "object": "name",
+        "sortIndex": "1",
+        "alignLeft": true
+      }
+    ]
+  },
+  {
+    "type": "action",
+    "fields": [
+      {
+        "name": "Name",
+        "object": "name",
+        "sortIndex": "1",
+        "alignLeft": true
+      },
+      {
+        "name": "Action Type",
+        "object": "system.actionType",
+        "sortIndex": ""
+      },
+      {
+        "name": "Movement Action",
+        "object": "system.isMovementAction",
+        "sortIndex": ""
+      },
+      {
+        "name": "Description",
+        "object": "system.description.value",
+        "sortIndex": ""
+      }
+    ]
+  },
+  {
+    "type": "display",
+    "fields": [
+      {
+        "name": "Name",
+        "object": "name",
+        "sortIndex": "1",
+        "alignLeft": true
+      },
+      {
+        "name": "Skill",
+        "object": "system.skill",
+        "sortIndex": ""
+      },
+      {
+        "name": "Range",
+        "object": "system.range",
+        "sortIndex": ""
+      },
+      {
+        "name": "Damage DIce",
+        "object": "system.damage.dice",
+        "sortIndex": ""
+      },
+      {
+        "name": "Qualities",
+        "object": "system.qualities.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "Description",
+        "object": "system.description.value",
+        "sortIndex": ""
+      }
+    ]
+  },
+  {
+    "type": "npc",
+    "fields": [
+      {
+        "name": "Name",
+        "object": "name",
+        "sortIndex": "1",
+        "alignLeft": true
+      },
+      {
+        "name": "Description",
+        "object": "system.details.biography.value",
+        "sortIndex": ""
+      }
+    ]
+  },
+  {
+    "type": "enchantment",
+    "fields": [
+      {
+        "name": "Name",
+        "object": "name",
+        "sortIndex": "1",
+        "alignLeft": true
+      },
+      {
+        "name": "Difficulty",
+        "object": "system.difficulty",
+        "sortIndex": ""
+      },
+      {
+        "name": "Damage Dice",
+        "object": "system.damage.dice",
+        "sortIndex": ""
+      },
+      {
+        "name": "Hinderance",
+        "object": "system.traits.hindrance",
+        "sortIndex": ""
+      },
+      {
+        "name": "talismanType",
+        "object": "system.traits.talismanType",
+        "sortIndex": ""
+      },
+      {
+        "name": "Description",
+        "object": "system.description.value",
+        "sortIndex": ""
+      }
+    ]
+  },
+  {
+    "type": "spell",
+    "fields": [
+      {
+        "name": "Name",
+        "object": "name",
+        "sortIndex": "1",
+        "alignLeft": true
+      },
+      {
+        "name": "Duration",
+        "object": "system.duration",
+        "sortIndex": ""
+      },
+      {
+        "name": "Cost",
+        "object": "system.cost",
+        "sortIndex": ""
+      },
+      {
+        "name": "Difficulty",
+        "object": "system.difficulty.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "Spell Level",
+        "object": "system.spellLevel",
+        "sortIndex": ""
+      },
+      {
+        "name": "Description",
+        "object": "system.description.value",
+        "sortIndex": ""
+      }
+    ]
+  },
+  {
+    "type": "npcaction",
+    "fields": [
+      {
+        "name": "Name",
+        "object": "name",
+        "sortIndex": "1",
+        "alignLeft": true
+      },
+      {
+        "name": "Description",
+        "object": "system.description.value",
+        "sortIndex": ""
+      }
+    ]
+  },
+  {
+    "type": "npcattack",
+    "fields": [
+      {
+        "name": "Name",
+        "object": "name",
+        "sortIndex": "1",
+        "alignLeft": true
+      },
+      {
+        "name": "Range",
+        "object": "system.range",
+        "sortIndex": ""
+      },
+      {
+        "name": "Qualities",
+        "object": "system.qualities.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "Damage Type",
+        "object": "system.damage.type",
+        "sortIndex": ""
+      },
+      {
+        "name": "Damage",
+        "object": "system.damage.dice",
+        "sortIndex": ""
+      },
+      {
+        "name": "Attack Type",
+        "object": "system.attackType",
+        "sortIndex": ""
+      },
+      {
+        "name": "Description",
+        "object": "system.description.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "Size",
+        "object": "system.size",
+        "sortIndex": ""
+      }
+    ]
+  },
+  {
+    "type": "nature",
+    "fields": [
+      {
+        "name": "Name",
+        "object": "name",
+        "sortIndex": "1",
+        "alignLeft": true
+      },
+      {
+        "name": "Description",
+        "object": "system.description.value",
+        "sortIndex": ""
+      }
+    ]
+  },
+  {
+    "type": "story",
+    "fields": [
+      {
+        "name": "Name",
+        "object": "name",
+        "sortIndex": "1",
+        "alignLeft": true
+      },
+      {
+        "name": "Description",
+        "object": "system.description.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "Trait",
+        "object": "system.trait",
+        "sortIndex": ""
+      }
+    ]
+  },
+  {
+    "type": "talent",
+    "fields": [
+      {
+        "name": "Name",
+        "object": "name",
+        "sortIndex": "1",
+        "alignLeft": true
+      },
+      {
+        "name": "Requirements",
+        "object": "",
+        "sortIndex": ""
+      },
+      {
+        "name": "Rank Max",
+        "object": "system.rank.max",
+        "sortIndex": ""
+      },
+      {
+        "name": "multiRank",
+        "object": "system.multiRank",
+        "sortIndex": ""
+      },
+      {
+        "name": "Linked Skill",
+        "object": "system.linkedSkill",
+        "sortIndex": ""
+      },
+      {
+        "name": "Description",
+        "object": "system.description.value",
+        "sortIndex": ""
+      },
+      {
+        "name": "Talent Type",
+        "object": "system.talentType",
+        "sortIndex": ""
+      }
+    ]
+  }
+]
