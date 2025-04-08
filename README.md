@@ -30,6 +30,8 @@ I will also consider feature requests and bug reports, including css bugs. I am 
 - FFG Star Wars
 - Conan 2d20
 
+The defined fields for these system can be found in <a href="https://github.com/Lyinggod/lgs-item-viewer/tree/main/setting%20files">System Files</a>. Paste the content into the _Field Configuration_ dialog via the _Import_ button.
+
 ## Features
 
 <img src="https://github.com/Lyinggod/lgs-item-viewer/blob/main/images/interface-map.jpg" width=800>
