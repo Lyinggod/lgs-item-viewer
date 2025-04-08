@@ -28,6 +28,7 @@ Before the item viewer can be used, it must be configured by assigning a tab nam
 - **Hide**: Hides the tab from players. The tab name will have a ban icon next to it.
 - **Export Button**: Shows a dialog that contains the saved tab information.
 - **Import Button**: Creates a dialog that allowed the exported data to be pasted into.
+- **Tab Header**: Reveals a text field to add text or HTML that will appear at the top of the tab.
 
 Drag and Drop rows to set the tab order.
 
