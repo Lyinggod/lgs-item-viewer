@@ -18,15 +18,21 @@ Some fields require special coding to be seen correctly because of how they are 
 
 <img src="https://github.com/Lyinggod/lgs-item-viewer/blob/main/images/custom-desc-example.jpg" width=400>
 
+<a href="https://github.com/Lyinggod/lgs-item-viewer/wiki/Adding-New-Systems">__Adding New Systems__</a> - To add your own systems, see this wiki.
+
+**Requesting Custom Systems**
+
 To request that your system be added to the viewer, submit a ticket that includes your system and desired results. You may be requested to provide a mockup or object with the desired output if the description is not clear.
 
 I will also consider feature requests and bug reports, including css bugs. I am unlikely to consider an overhaul just to match a systems asthetics or visual theme.
 
-### Systems
+### Currently Defined Systems
 - FFG Star Wars
 - Conan 2d20
 
 ## Features
+
+<img src="https://github.com/Lyinggod/lgs-item-viewer/blob/main/images/interface-map.jpg" width=800>
 
 Items are shown, by default, in tables grouped by type, regardless of source, based on the the compendium folder they are in. 
 
@@ -34,33 +40,73 @@ Items are shown, by default, in tables grouped by type, regardless of source, ba
 
 Folder in compendiums are used to assist in filtering display
 
-**Filter by Folder** - Checking a checkbox will show only items associated with that folder.
+1. **Tabs** - Defined via settings, these are used to group items based on compendium folders. This tab shows that it is hidden from players.
+2. **Table Configuration** - Provides options to configure tables (see below)
+3. **Filter Column Configuration** - Allows folders to be hidden from players. In the picture the _Adventure_ folder and all subfolders are hidden from player,
+- Filters are based on the folders inside compendiums and appear, by default, alphabetically by name.
+- Drag and drop can be used to re-order folders within the level. Example _Armor_ and _Weapons_ can be re-ordered but cannot be moved outside of _Adventurer_.
+4. **Filter by Folder** - check to see only items contain in that folder
+5. **Filter by Tag** - If using the _Item Tags_ module, the tags will appear here.
+6. **Live Search Field** - Searches items display from filaters as you type using partial word match. Searching "Cat" "_Cat_ch". Multiple words can be used; e.g. "magic sword"
+7. **Table Hidden From Player** - Player hidden tables are collapsed and still accessible by the GM. This is set in #2.
+8. **Item Icon** - Click to view sheet or drag to actor. Dragging Journals and non-actor compatible items will have not affect.
 
-**Lock Button** - Click to unlock additional options
+**Table Configuration**
 
-- **Folder Order** - Folders may be re-ordered within their folder level and group via the lock button and using drag and drop. You cannot move a subfolder out from under its parent folder (1 level higher).
-- **Hide Folders** - Folders may be hidden from players. Clicking the grey ban symbol will hide a folder, and any subfolders, from player view. 
+This dialog is used to configure the appearance of tables
 
-**Filter by Tags** - If the module _Item Tags_ is used, items also be sorted by tags.
+<img src="https://github.com/Lyinggod/lgs-item-viewer/blob/main/images/table-configuration-dialog.jpg" width=400>
 
-**Search** - Live search using a partial, multiple word search; "cat" will show "cat", "catch", "scatter". "cat" and "bug" will show only show items that have words that contain both these groups of text.
-
-
-### Table View
-
-Each table has a cog which opens a configuration dialog for that table.
-
+- **Table Name** - By default the table name is the name of the item type.
+- **Table Message** - A HTML message placed below the table name.
 - **Grid View**
-  - Cheched: Shows fields in grids. Description is shown by clicking on the row
-  - Unchecked: All fields are shown as a list.
-- **Group Items by Folder**
-  - Checked: Shows separate tables based folder name and type. Therefore if a Compendium had a folder named "Melee" and a folder named "Range" that had items of type "weapon" then, instead of one table, there would be two.
-  - Unchecked: A single table is displayed for each type.
-- **Hide from Players** - Hides the specific table from players. This is marked with a ban icon in the GM view.
-- **Select Image Type** - This defines how images appear, if assigned to the item. This is per table.
-- **Move**: - This is used to move the relative position of the table compared to other tables in the tab each time the up or down arrow is clicked. The _Hide Table Rows_ checkbox will collapse tables, making them easier to see.
+  -  Checked: Shows the table in a a grid as in the above image. Click on the row to show the item description.
+  -  Unchecked: Shows only one column with all fields displayed horizontally, with the description as the last element.
+-  **Group Items by folder**: Subdivides tables based on folder source. This causes table name to default back to item type.
+-  **Hide From Players**: Hides the table from players. Collapses the table in GM view
+-  **Hide Folder Name**: When using _Group Items by Folder_, the source folder is shown below the name. This hides the folder name.
+-  **Image Display Options**: Sets the maximum height and width of the table and its location. In grid view, image appears with description.
+  - **Trim large Images**: Sets image to full size. If image is wider or taller then maximum size then it trims the left/right or bottom the image based on whether it is wider or higher then max.
+- **Move** - Change relative position of table compared to other tables in the tab. Changed _Group Items by Folder_ resets this to original position. This functions in real time.
+  - Use _Hide Folder Rows_ in _Temporary Settings_ section to hide table rows to make changing row positions easier to see.
 
-## Journals Notes
+## Item Viewer Journal
+
+The Item Viewer Journal contains the page displayed in the _Info_ tab and pages for Journal pills. The page for the _Info_ tab must be named "Player Message".
+
+## Journals Pills
+
+<img src="https://github.com/Lyinggod/lgs-item-viewer/blob/main/images/journal-pills.jpg" width=400>
+
+Journal pills are buttons that will show journals relating to folder names or tags. 
+
+To create a journal pill use the following formats. 
+
+Using _Groups Items by Folder_ in _Table Configuration_ dialog affects the format:
+
+- _Group Items by Type_: Checked
+  - {Tag Name from Filter List} (tag) ({OriginalItemType}-folder-{Folder-Name-with-hyphens})
+  - {Folder Name from Filter List} ({OriginalItemType}-folder-{SanitizedTopLevelFolderName})
+- _Group Items by Type_: Unchecked
+  - {Tag Name from Filter List} (tag) (OriginalItemType)
+  - {Folder Name from Filter List} ({OriginalItemType})
+
+- _Tag Name_: Name of the tag as defined via the _Item Tags_ module. It can be multiple words
+- _(tag)_:  This must be as shown and defines that a page is for a tag and not a folder.
+- _OriginalItemType_: The item type of the item. This same as the default table name for the item type
+- _-folder-_: This must be exactly folder, including dashes.
+- _Folder-Name-with-hyphens_: The name of the folder seen under _Filter by Folder_, with spaces replaced with hyphens. Therefore if the folder name is _Combat Kits_, this would be _Combat-Kits_.
+
+
+Example of creating journal entry for the tag _Kit_ for items in the _Kits_ Folder that are of item type "gear".
+
+_Group Items by Type_: Checked
+Kit (tag) (gear-folder-Kits)
+- Bulky (tag) (gear-folder-Armor)
+- Bulky (tag) (gear-folder-Armor)
+- Bulky (tag) (gear-folder-Armor)
+
+
 
 ## Viewing journals as items
 
