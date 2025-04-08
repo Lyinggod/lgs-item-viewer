@@ -72,15 +72,18 @@ This dialog is used to configure the appearance of tables
 
 ## Item Viewer Journal
 
-The Item Viewer Journal contains the page displayed in the _Info_ tab and pages for Journal pills. The page for the _Info_ tab must be named "Player Message".
+The _Item Viewer Journal_ contains the page displayed in the _Info_ tab and pages for Journal pills. The page for the _Info_ tab must be named "Player Message".
 
 ## Journals Pills
 
-<img src="https://github.com/Lyinggod/lgs-item-viewer/blob/main/images/journal-pills.jpg" width=400>
+<img src="https://github.com/Lyinggod/lgs-item-viewer/blob/main/images/journal-pills.jpg" width=600>
 
 Journal pills are buttons that will show journals relating to folder names or tags. 
 
-To create a journal pill use the following formats. 
+In the above image, the _Gear_ button is folder note and the _Kit_ button is a tag note. Clicking the button will show the journal page relating to the button. These are assigned per table since a _Kit_ could have a different definition or description, depending on the table.
+
+
+To create a journal pill, create a page in journal _Item Viewer Journal_ and name the page based on the following formats. 
 
 Using _Groups Items by Folder_ in _Table Configuration_ dialog affects the format:
 
@@ -97,18 +100,10 @@ Using _Groups Items by Folder_ in _Table Configuration_ dialog affects the forma
 - _-folder-_: This must be exactly folder, including dashes.
 - _Folder-Name-with-hyphens_: The name of the folder seen under _Filter by Folder_, with spaces replaced with hyphens. Therefore if the folder name is _Combat Kits_, this would be _Combat-Kits_.
 
+Example of creating journal entry for the tag _Kit_ for items in the _Kits_ Folder that are of item type "gear" (_Group Items by Folder_ is checked).
 
-Example of creating journal entry for the tag _Kit_ for items in the _Kits_ Folder that are of item type "gear".
+- Kit (tag) (gear-folder-Kits)
 
-_Group Items by Type_: Checked
-Kit (tag) (gear-folder-Kits)
-- Bulky (tag) (gear-folder-Armor)
-- Bulky (tag) (gear-folder-Armor)
-- Bulky (tag) (gear-folder-Armor)
+Example of creating journal entry for the folder _Melee Weapons_ for item type _weapon_ (_Group Items by Folder_ is **not** checked).
 
-
-
-## Viewing journals as items
-
-## Item Icon (left column)
-
+- Melee Weapons (weapon)
