@@ -1,20 +1,20 @@
 # Lyinggods Compendium Item Viewer
 
-This is a mostly system agnostic compendium viewer for showing items, journals, and actors in compendiums in a centralized location. It allows for organization of items by compendium folder and folders in compendiums. If offers options for filtering by text, folders, and tags.
+This is a mostly system agnostic compendium viewer for showing items, journals, and actors in a centralized location. It allows for organization of items by compendium folder and folders in compendiums. If offers options for filtering by text, folders, and tags.
 
 Some data may require system specific coding to be added.
 
 <img src="https://github.com/Lyinggod/lgs-item-viewer/blob/main/images/item-viewer.jpg" width=800>
 
-## Compendium Configuration
+## Compendium Preparation
+
+Compendiums must be placed in a compendium folder called _Item Viewer_. Folders within the Item Viewer folder are used to orgranize compendiums are into logical groups.
+
+**Setup**
 
 - Create a compendium folder called "Item Viewer".
 - Inside the folder _Item Viewer_, place one folder for tab that will appear in the viewer. The folder names will not be representative of the tab names.
 - Inside each tab folder, place the compendiums who contents will be associated with the tab.
-
-## Module Configuration
-
-Due to the agnostic nature of the viewer, tab names as well as all items and actor item types, as well as journals, must be defined in the viewer.
 
 ### Tab Configuration
 
@@ -33,22 +33,35 @@ Drag and Drop rows to set the tab order.
 
 ### Item Configuration
 
-<img src="https://github.com/Lyinggod/lgs-item-viewer/blob/main/images/configure-fields-dialog.jpg" width=400>
+Due to the agnostic nature of the viewer, tab names as well as all items and actor item types, as well as journals, must be defined in the module.
 
 For the purposes of this module, an item is considered to be any actor or item such as PC or a weapon, or journal.
 
 **Field Values**
 
-To define an item in the module, there are several options. 
+Before an item can be defined, its type and desired fields must determined.  
 
 - If familiar with JSON, a (dummy) item can be exported and the contents examined.
-- This module includes two macros _Show Actor Info_ and _Show Item Info_. These are simple modules that will show the actors or items fields and their values. Assign unqiue values in the item to help find the correct field. Fields that are not listed or have undesired values will require special coding to correctly appear in the viewer.
-  - The item type appears after the captured item name
-  - Journals are not shown in the macros as they are addressed below.
+- Use the provided macros to view actors and items: _Show Actor Info_ and _Show Item Info_.
+  - Modules will read items placed in folder _Field Test_.
+  - Modules show the field paths and values with items.
+  - Use custom field values to help identify correct paths.
+  - Click a path to selected it. Use CTRL+C to copy the path into memory.
+- Journals are not shown in the macros as they are addressed below.
 
-**Define Fields** button: Each item that is to be displayed in the viewer must be defined and have its fields assigned.
+_Macro Example_
+
+<img src="https://github.com/Lyinggod/lgs-item-viewer/blob/main/images/macro-example.jpg" width=400>
+
+### Defining Items and Fields
+
+<img src="https://github.com/Lyinggod/lgs-item-viewer/blob/main/images/configure-fields-dialog.jpg" width=400>
 
 **+ Add Item Type** button - Adds a new item block
+
+**Import Button** - Same function as in defining tabs
+
+**Export Button** - Same function as in defining tabs
 
 **item Type**: This name of the type such as _weapon_, _armor_, _talent_, _npcaction_, etc.
 
@@ -67,23 +80,23 @@ If a path is incorrect, the value _field?_ will be shown.
 
 **Journals**
 
-Journals only have one field, Name. Other fields that are automatically added should be deleted.
+Journals only have one field, _Name_. Other fields that are automatically added should be deleted.
 
 <img src="https://github.com/Lyinggod/lgs-item-viewer/blob/main/images/journal-field-example.jpg" width=400>
 
 **Drag and Drop**
 
-Rows in the Configure Fields dialog may be dragged and dropped to determine the order they appear in the viewer, except for description or biography. These will always appear after all other fields defined in this dialog.
+Rows in the _Configure Fields_ dialog may be dragged and dropped to determine the order they appear in the viewer, except for description or biography. These will always appear after all other fields defined in this dialog regardless of their order in the item list.
 
 ## Compatible systems
 
-Some fields require special coding to be seen correctly. This usually appears as _Object Object_. It may also be special text that is added into the description such as something like:
+Some fields require special coding to be seen correctly because they are stored in array or similar issues.  It may also be desired to add special text into the description. In the following example, additional code was added to display attributes in the description as a table:
 
-_Your character gains the following skills: x, y, z_ appearing in the description, where x, y, and z are pulled from item. 
+<img src="https://github.com/Lyinggod/lgs-item-viewer/blob/main/images/custom-desc-example.jpg" width=400>
 
-To request that your system be added to the viewer, submit a ticket that includes your system and desired results. You may be requested to provide a mockup of the desired output if the description is not clear.
+To request that your system be added to the viewer, submit a ticket that includes your system and desired results. You may be requested to provide a mockup or object with the desired output if the description is not clear.
 
-I will also consider feature requests and bug reports, including css bugs. I am unlikely to consider an overhaul of the appearance to match a system or settings visual theme.
+I will also consider feature requests and bug reports, including css bugs. I am unlikely to consider an overhaul just to match a systems asthetics or visual theme.
 
 ### Systems
 - FFG Star Wars
@@ -91,7 +104,7 @@ I will also consider feature requests and bug reports, including css bugs. I am 
 
 ## Features
 
-Items are shown, by default, in tables grouped by type, regardless of source, based on the the compendium folder they are in.
+Items are shown, by default, in tables grouped by type, regardless of source, based on the the compendium folder they are in. 
 
 ### Folders in Compendiums
 
@@ -99,7 +112,7 @@ Folder in compendiums are used to assist in filtering display
 
 **Filter by Folder** - Checking a checkbox will show only items associated with that folder.
 
-**Lock Button** - Click to unlocke additional options
+**Lock Button** - Click to unlock additional options
 
 - **Folder Order** - Folders may be re-ordered within their folder level and group via the lock button and using drag and drop. You cannot move a subfolder out from under its parent folder (1 level higher).
 - **Hide Folders** - Folders may be hidden from players. Clicking the grey ban symbol will hide a folder, and any subfolders, from player view. 
