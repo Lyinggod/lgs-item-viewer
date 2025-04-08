@@ -102,8 +102,8 @@ Using _Groups Items by Folder_ in _Table Configuration_ dialog affects the forma
 
 Example of creating journal entry for the tag _Kit_ for items in the _Kits_ Folder that are of item type "gear" (_Group Items by Folder_ is checked).
 
-Kit (tag) (gear-folder-Kits)
+- Kit (tag) (gear-folder-Kits)
 
 Example of creating journal entry for the folder _Melee Weapons_ for item type _weapon_ (_Group Items by Folder_ is **not** checked).
 
-Melee Weapons (weapon)
+- Melee Weapons (weapon)
