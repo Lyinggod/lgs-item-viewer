@@ -6,9 +6,11 @@ Some data may require system specific coding to be added.
 
 <img src="https://github.com/Lyinggod/lgs-item-viewer/blob/main/images/item-viewer.jpg" width=800>
 
-## Compendium Preparation
+## Item Viewer Configuration
 
-<a src="https://github.com/Lyinggod/lgs-item-viewer/wiki/Configuring-Item-Viewer">Configure Table Viewer</a> Wiki
+The item viewer will not work until it is configured. See the configuration wiki to setup the viewer.
+
+<a href="https://github.com/Lyinggod/lgs-item-viewer/wiki/Configuring-Item-Viewer">Configure Table Viewer</a> Wiki
 
 
 Compendiums must be placed in a compendium folder called _Item Viewer_. Folders within the Item Viewer folder are used to orgranize compendiums are into logical groups.
