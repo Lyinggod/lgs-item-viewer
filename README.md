@@ -30,6 +30,8 @@ I will also consider feature requests and bug reports, including css bugs. I am 
 - FFG Star Wars
 - Conan 2d20
 
+The defined fields for these system can be found in <a href="https://github.com/Lyinggod/lgs-item-viewer/tree/main/setting%20files">System Files</a>. Paste the content into the _Field Configuration_ dialog via the _Import_ button.
+
 ## Features
 
 <img src="https://github.com/Lyinggod/lgs-item-viewer/blob/main/images/interface-map.jpg" width=800>
@@ -40,16 +42,17 @@ Items are shown, by default, in tables grouped by type, regardless of source, ba
 
 Folder in compendiums are used to assist in filtering display
 
-1. **Tabs** - Defined via settings, these are used to group items based on compendium folders. This tab shows that it is hidden from players.
-2. **Table Configuration** - Provides options to configure tables (see below)
-3. **Filter Column Configuration** - Allows folders to be hidden from players. In the picture the _Adventure_ folder and all subfolders are hidden from player,
-- Filters are based on the folders inside compendiums and appear, by default, alphabetically by name.
-- Drag and drop can be used to re-order folders within the level. Example _Armor_ and _Weapons_ can be re-ordered but cannot be moved outside of _Adventurer_.
-4. **Filter by Folder** - check to see only items contain in that folder
-5. **Filter by Tag** - If using the _Item Tags_ module, the tags will appear here.
-6. **Live Search Field** - Searches items display from filaters as you type using partial word match. Searching "Cat" "_Cat_ch". Multiple words can be used; e.g. "magic sword"
-7. **Table Hidden From Player** - Player hidden tables are collapsed and still accessible by the GM. This is set in #2.
-8. **Item Icon** - Click to view sheet or drag to actor. Dragging Journals and non-actor compatible items will have not affect.
+1. **Info Tab**: This is a permanent tab. It will show the contents of page "Player Message" from journal _Item Viewer Journal_.
+2. **Additional Tabs** - Defined via settings, these are used to group items based on compendium folders. This tab shows that it is hidden from players.
+3. **Table Configuration** - Provides options to configure tables (see below)
+4. **Filter Column Configuration** - Allows folders to be hidden from players. In the picture the _Adventure_ folder and all subfolders are hidden from player,
+  - Filters are based on the folders inside compendiums and appear, by default, alphabetically by name.
+  - Drag and drop can be used to re-order folders within the level. Example _Armor_ and _Weapons_ can be re-ordered but cannot be moved outside of _Adventurer_.
+5. **Filter by Folder** - check to see only items contain in that folder
+6. **Filter by Tag** - If using the _Item Tags_ module, the tags will appear here.
+7. **Live Search Field** - Searches items display from filaters as you type using partial word match. Searching "Cat" "_Cat_ch". Multiple words can be used; e.g. "magic sword"
+8. **Table Hidden From Player** - Player hidden tables are collapsed and still accessible by the GM. This is set in #2.
+9. **Item Icon** - Click to view sheet or drag to actor. Dragging Journals and non-actor compatible items will have not affect.
 
 **Table Configuration**
 
