@@ -14,7 +14,7 @@ The item viewer will not work until it is configured. See the configuration wiki
 
 ## Compatible systems
 
-Some fields require special coding to be seen correctly because of how they are stored. If a desired field does not appear in the Fields macro, this may be the case.  It may also be desired to add special text into the description. In the following example, additional code was added to display attributes in the description as a table:
+Some fields require special coding to be seen correctly because of how their data is stored. If a desired field does not appear in the Fields macro, this may be the case and additional coding may be required to properly retrieve data from the field.  It may also be desired to add special text into the description. In the following example, additional code was added to display attributes in the description as a table:
 
 <img src="https://github.com/Lyinggod/lgs-item-viewer/blob/main/images/custom-desc-example.jpg" width=400>
 
