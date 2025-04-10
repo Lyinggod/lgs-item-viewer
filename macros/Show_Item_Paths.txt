@@ -1,0 +1,129 @@
+(async () => {
+  // Group items by type.
+  const items = game.items.contents;
+  const groupedItems = {};
+  items.forEach(item => {
+    const type = item.type;
+    if (!groupedItems[type]) groupedItems[type] = [];
+    groupedItems[type].push(item);
+  });
+
+  // Recursive function to extract nested paths from an object.
+  function getNestedPaths(obj, prefix = "") {
+    let paths = [];
+    for (let key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        const currentPath = prefix ? prefix + "." + key : key;
+        if (typeof obj[key] === "object" && obj[key] !== null) {
+          paths.push({path: currentPath, value: "object"});
+          paths = paths.concat(getNestedPaths(obj[key], currentPath));
+        } else {
+          paths.push({path: currentPath, value: obj[key]});
+        }
+      }
+    }
+    return paths;
+  }
+
+  // Build the HTML content for the dialog.
+  let content = `
+    <style>
+      /* Auto-resize dialog content */
+      .dialog-content {
+        width: auto !important;
+        height: auto !important;
+        display: inline-block;
+      }
+      /* Make fields selectable */
+      .fields-table td {
+        user-select: text;
+        cursor: text;
+        padding: 2px 8px;
+      }
+      .fields-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .fields-table td:first-child {
+        width: 60%;
+      }
+      .fields-table td:last-child {
+        width: 40%;
+      }
+    </style>
+    <div id="item-list">
+    <div style="padding-bottom:10px;">Enter a uniquely identified value in the item to identify the correct field the re-run macro; e.g. 99<br>Click Item name to see fields.</div>
+  `;
+  // Loop through each type and display only one item per type.
+  for (let type in groupedItems) {
+    // Use the first item from each type.
+    const item = groupedItems[type][0];
+    content += `
+      <div class="item-entry" data-item-id="${item.id}" style="cursor:default; margin-bottom:5px;">
+        <strong style="cursor:pointer;">${item.name} (${type})</strong>        
+        <div class="fields-container" style="margin-left:20px; display:none;"></div>
+      </div>`;
+  }
+  content += `</div>`;
+
+  // Create and render the dialog.
+  new Dialog({
+    title: "Items by Type",
+    content: content,
+    buttons: {
+      close: { label: "Close" }
+    },
+    render: (html) => {
+      // Adjust the dialog container to auto-resize.
+      html.closest('.dialog').css({
+        width: 'auto',
+        height: 'auto'
+      });
+
+      // Set up click event for the item name (<strong> element) only.
+      html.find('.item-entry strong').click(async function(e) {
+        // Prevent the click from affecting other elements.
+        e.stopPropagation();
+        const li = $(this).closest('.item-entry');
+        const itemId = li.data('item-id');
+        const item = game.items.get(itemId);
+        const container = li.find('.fields-container');
+
+        // Toggle expand/collapse.
+        if (container.is(':visible')) {
+          container.slideUp();
+        } else {
+          const systemData = item.system || {};
+          const fields = getNestedPaths(systemData, "item.system");
+          let fieldsHtml = `
+                <table class="fields-table">
+               <thead>
+              <tr>
+                <th>Field Path</th>
+                <th>Value</th>
+              </tr>
+              </thead>
+                `;
+          fields.forEach(field => {
+            // Skip creating row if the value is "object"
+            if (field.value !== "object") {
+              fieldsHtml += `
+                <tr class="field-entry" onclick="event.stopPropagation();">
+                  <td>${field.path.replace("item.", "")}</td>
+                  <td>${typeof field.value === 'object' ? JSON.stringify(field.value) : field.value}</td>
+                </tr>`;
+            }
+          });
+          fieldsHtml += `</table>`;
+          container.html(fieldsHtml);
+          container.slideDown();
+        }
+      });
+
+      // Ensure that clicks on field entries do not bubble up.
+      html.on('click', '.fields-table td', (ev) => {
+        ev.stopPropagation();
+      });
+    }
+  }).render(true);
+})();

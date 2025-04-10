@@ -1,0 +1,203 @@
+(async () => {
+  // Group actors by type.
+  const actors = game.actors.contents;
+  const groupedActors = {};
+  actors.forEach(actor => {
+    const type = actor.type;
+    if (!groupedActors[type]) groupedActors[type] = [];
+    groupedActors[type].push(actor);
+  });
+
+  // Recursive function to extract nested paths from an object.
+  function getNestedPaths(obj, prefix = "") {
+    let paths = [];
+    for (let key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        const currentPath = prefix ? prefix + "." + key : key;
+        if (typeof obj[key] === "object" && obj[key] !== null) {
+          paths.push(currentPath);
+          paths = paths.concat(getNestedPaths(obj[key], currentPath));
+        } else {
+          paths.push(currentPath);
+        }
+      }
+    }
+    return paths;
+  }
+
+  // Helper function to safely retrieve a value from an object by a dot-separated path.
+  function getValueFromPath(obj, path) {
+    return path.split('.').reduce((acc, cur) => (acc ? acc[cur] : undefined), obj);
+  }
+
+  // Build the HTML content for the dialog.
+  let content = `
+    <style>
+      /* Dialog styling */
+      .dialog-content {
+        width: 600px !important;
+        height: auto !important;
+        max-height: none !important;
+        overflow-y: visible !important;
+      }
+      /* Body content overflow handling */
+      .dialog .window-content {
+        overflow-y: visible;
+        height: auto !important;
+        max-height: none !important;
+      }
+      /* Container styling */
+      /* Table styling */
+      .fields-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .fields-table th, .fields-table td {
+        border: 1px solid #ccc;
+        padding: 4px;
+        text-align: left;
+        user-select: text;
+        cursor: text;
+      }
+      /* Path column specifically */
+      .fields-table td:first-child {
+        user-select: all;
+        cursor: text;
+      }
+      /* Make fields selectable */
+      .fields-container li {
+        user-select: text;
+        cursor: text;
+      }
+    </style>
+    <div id="actor-list">
+     <div style="padding-bottom:10px;">Enter a uniquely identified value in the item to identify the correct field the re-run macro; e.g. 99<br>Click actor name to see fields.</div>
+  `;
+  
+  // Loop through each type and display only one actor per type.
+  for (let type in groupedActors) {
+    // Use the first actor from each type.
+    const actor = groupedActors[type][0];
+    content += `<ul>`;
+    content += `
+      <li class="actor-entry" data-actor-id="${actor.id}" style="cursor:default; margin-bottom:5px;">
+        <strong style="cursor:pointer;">${actor.name} (${type})</strong>
+        <div class="fields-container" style="margin-left:20px; display:none;"></div>
+      </li>`;
+    content += `</ul>`;
+  }
+  content += `</div>`;
+
+  // Create the dialog with proper height settings
+  const dialog = new Dialog({
+    title: "Actors by Type",
+    content: content,
+    buttons: {
+      close: { label: "Close" }
+    },
+    default: "close",
+    render: html => {
+      // Set the dialog width and ensure height can adjust
+      const dialogElement = html.closest('.app.dialog');
+      dialogElement.css({
+        width: '600px',
+        height: 'auto'
+      });
+      
+      // Find the window-content element and ensure it can expand
+      const windowContent = dialogElement.find('.window-content');
+      windowContent.css({
+        height: 'auto',
+        'max-height': 'none',
+        'overflow-y': 'visible'
+      });
+
+      // Handle click on actor names to expand/collapse
+      html.find('.actor-entry strong').click(async function(e) {
+        e.stopPropagation();
+        const li = $(this).closest('.actor-entry');
+        const actorId = li.data('actor-id');
+        const actor = game.actors.get(actorId);
+        const container = li.find('.fields-container');
+
+        // Toggle expand/collapse.
+        if (container.is(':visible')) {
+          container.slideUp(function() {
+            // After animation completes, resize the dialog
+            adjustDialogHeight(dialogElement);
+          });
+        } else {
+          const systemData = actor.system || {};
+          const fields = getNestedPaths(systemData, "actor.system");
+          
+          // Only collect fields with non-object values
+          const nonObjectFields = [];
+          fields.forEach(field => {
+            // Remove the "actor.system." prefix to access the relative path.
+            const relativePath = field.replace("actor.system.", "");
+            const value = getValueFromPath(actor.system, relativePath);
+            // Only include fields that don't have object values
+            if (typeof value !== 'object' || value === null) {
+              nonObjectFields.push({ path: field, value: value });
+            }
+          });
+
+          // Build the table HTML output.
+          let tableHtml = `<table class="fields-table">
+            <thead>
+              <tr>
+                <th>Field Path</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>`;
+          // Render only non-object fields
+          nonObjectFields.forEach(entry => {
+            tableHtml += `<tr>
+              <td class="path-cell">${entry.path.replace("actor.","")}</td>
+              <td>${entry.value}</td>
+            </tr>`;
+          });
+          tableHtml += `</tbody></table>`;
+
+          container.html(tableHtml);
+          container.slideDown(function() {
+            // After animation completes, resize the dialog
+            adjustDialogHeight(dialogElement);
+          });
+        }
+      });
+
+      // Ensure that clicks on field entries do not bubble up.
+      html.on('click', '.fields-container li', (ev) => {
+        ev.stopPropagation();
+      });
+      
+      // Helper function to adjust dialog height
+      function adjustDialogHeight(dialogElement) {
+        // Get the current content height
+        const windowContent = dialogElement.find('.window-content');
+        const contentHeight = windowContent.prop('scrollHeight');
+        
+        // Set the dialog and window-content to match the content height
+        windowContent.css({
+          height: 'auto',
+          'max-height': 'none',
+          'overflow-y': 'visible'
+        });
+        
+        // Force a reflow to ensure proper height calculation
+        dialogElement.css('height', 'auto');
+        
+        // Apply any position adjustments if needed
+        dialog.setPosition({height: 'auto'});
+      }
+    }
+  }, {
+    width: 600,
+    height: "auto",
+    resizable: true
+  });
+  
+  dialog.render(true);
+})();
