@@ -14,7 +14,13 @@ The item viewer will not work until it is configured. See the configuration wiki
 
 ## Compatible systems
 
-Some fields require special coding to be seen correctly because of how their data is stored. If a desired field does not appear in the Fields macro, this may be the case and additional coding may be required to properly retrieve data from the field.  It may also be desired to add special text into the description. In the following example, additional code was added to display attributes in the description as a table:
+This offers basic compatibility "out of the box", once fields have been defined. If simple values are used, such as number or string (text characters), then these will be displayed in the view exactly as they are stored.
+
+### Special Fields
+
+Some fields have special values, such as a list of weapon qualites. These are not stored as simple but as arrays or objects. These fields require specific coding for the system.
+
+In some cases it may be desired to add additional content to the description that is derived from stored values such as the example attributes in the following image being displayed as part of the description.
 
 <img src="https://github.com/Lyinggod/lgs-item-viewer/blob/main/images/custom-desc-example.jpg" width=400>
 
@@ -115,7 +121,7 @@ Example of creating journal entry for the folder _Melee Weapons_ for item type _
 
 - Melee Weapons (weapon)
 
-### Special Tabs
+### Special Tags
 
 If the Item Tags module is installed, the tag "hide" can be used to hide individual items from players, showing a Ban icon, next to the item, to the GM.
 
