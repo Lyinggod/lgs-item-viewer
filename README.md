@@ -6,6 +6,10 @@ Some data may require system specific coding to be added.
 
 <img src="https://github.com/Lyinggod/lgs-item-viewer/blob/main/images/item-viewer.jpg" width=800>
 
+## Item Viewer Settings
+
+
+
 ## Item Viewer Configuration
 
 The item viewer will not work until it is configured. See the configuration wiki to setup the viewer.
