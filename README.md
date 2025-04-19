@@ -86,7 +86,7 @@ Folder in compendiums are used to assist in filtering display
 
 This dialog is used to configure the appearance of tables
 
-xxx
+<img src="https://github.com/Lyinggod/lgs-item-viewer/blob/main/images/table-configuration-dialogs.jpg" width=400>
 
 - **Table Name** - By default the table name is the name of the item type.
 - **Subheader Name** - This allows for a subheader to be applied to a table. If the table set to _Group Items by Folder_ (see below) then this value defaults to the folder name.
