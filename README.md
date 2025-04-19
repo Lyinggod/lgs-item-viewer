@@ -52,7 +52,7 @@ Items are shown, by default, in tables grouped by type, regardless of source, ba
 
 Folder in compendiums are used to assist in filtering display
 
-1. **Info Tab**: This is a permanent tab. It will show the contents of page "Player Message" from journal _Item Viewer Journal_.
+1. **Info Tab**: This is a permanent tab. It will show the contents of page "Player Message" from journal _Catalog Viewer Journal_.
 2. **Additional Tabs** - Defined via settings, these are used to group items based on compendium folders. This tab shows that it is hidden from players.
 3. **Table Configuration** - Provides options to configure tables (see below)
 4. **Filter Column Configuration** - Allows folders to be hidden from players. In the picture the _Adventure_ folder and all subfolders are hidden from player,
@@ -83,20 +83,27 @@ This dialog is used to configure the appearance of tables
 - **Move** - Change relative position of table compared to other tables in the tab. Changed _Group Items by Folder_ resets this to original position. This functions in real time.
   - Use _Hide Folder Rows_ in _Temporary Settings_ section to hide table rows to make changing row positions easier to see.
 
-## Item Viewer Journal
+## Catalog Viewer Journal
 
-The _Item Viewer Journal_ contains the page displayed in the _Info_ tab and pages for Journal pills. The page for the _Info_ tab must be named "Player Message".
+The _Catalog Viewer Journal_ is used to provide information to the players and auguement folder or tag information. 
 
-## Journals Pills
+A player message may be shown to the user by creating a page called _Player Message_. This may conain @UUID links to journals, actors, or items.
+
+Additionally _journal pills_ may be create that amplifying information associated with the folders or tags that appear on the right. Clicking the pill will show the related journal.
+
+### Journals Pills
 
 <img src="https://github.com/Lyinggod/lgs-item-viewer/blob/main/images/journal-pills.jpg" width=600>
 
-Journal pills are buttons that will show journals relating to folder names or tags. 
+Depending on the chosen methods of organization, it may be beneficial to have additional information available to the player based on the folder name or the tag as it relates to a folder. 
+
+This information is provided via Journal pills, which are buttons that will show a journal page relating to folder names or tags. 
 
 In the above image, the _Gear_ button is folder note and the _Kit_ button is a tag note. Clicking the button will show the journal page relating to the button. These are assigned per table since a _Kit_ could have a different definition or description, depending on the table.
 
+## Creating a Journal Pill
 
-To create a journal pill, create a page in journal _Item Viewer Journal_ and name the page based on the following formats. 
+To create a journal pill, create a page in journal _Catalog Viewer Journal_ and name the page based on the following formats. 
 
 Using _Groups Items by Folder_ in _Table Configuration_ dialog affects the format:
 
@@ -121,9 +128,13 @@ Example of creating journal entry for the folder _Melee Weapons_ for item type _
 
 - Melee Weapons (weapon)
 
+## Tags
+
+Tags are a convienient method of organizing items by type. _Item Tags_ module offers a simple way to do this.
+
 ### Special Tags
 
-If the Item Tags module is installed, the tag "hide" can be used to hide individual items from players, showing a Ban icon, next to the item, to the GM.
+If the _Item Tags_ module is installed, the tag "hide" can be used to hide individual items from players, showing a Ban icon, next to the item, to the GM.
 
 ## Installation
 
