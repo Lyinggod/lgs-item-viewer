@@ -1,5 +1,5 @@
 # Lyinggods Compendium Item Viewer
-
+ 
 This is a mostly system agnostic compendium viewer for showing items, journals, and actors in a centralized location. It allows for organization of items by compendium folder and folders in compendiums. If offers options for filtering by text, folders, and tags.
 
 The viewer uses a combination of tabs and the folders in compendiums to organize how items are displayed. 
