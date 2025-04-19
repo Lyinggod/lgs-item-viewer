@@ -2,13 +2,27 @@
 
 This is a mostly system agnostic compendium viewer for showing items, journals, and actors in a centralized location. It allows for organization of items by compendium folder and folders in compendiums. If offers options for filtering by text, folders, and tags.
 
+The viewer uses a combination of tabs and the folders in compendiums to organize how items are displayed. 
+
+In each tab, a table is created for each type of item in the compendium. These tables can then be used to further divided by the top folders in the compendium.
+
 Some data may require system specific coding to be added.
 
 <img src="https://github.com/Lyinggod/lgs-item-viewer/blob/main/images/item-viewer.jpg" width=800>
 
 ## Item Viewer Settings
 
+<img src="https://github.com/Lyinggod/lgs-item-viewer/blob/main/images/config-settings.jpg" width=400>
 
+- **Configurure Item Viewer** - Define tabs
+- **Define Fields** - Add items and fields
+- **Description Field Name** - The path of the description field.
+- **Currency Symbol** - The symbol for the unit of money. This may be text, the full fontawesome tag, or an html entity.
+- **Currency Symbol Location** - Defines where the symbol appear on the left or right side of the price value such as ``$#`` or ``#$``. This must be built into a custom setting for it to be applied.
+- **Hide Hidden Folders from GM** - Compendiums folders with "(-)" in the name are hidden from players in the viewer. This setting determines if it also hidden from the GM.  This must be built into a custom setting for it to be applied.
+- **Item Support Display as** -  Sets the option to display Journal Pills or expandible option that show the journal page contents below the table header.
+- **Journal Page Dialog Width** - Sets the width of the dialog created from the journal pill (see below).
+- **Journal Page Dialog Height** - Sets the height of the dialog created from the journal pill (see below).
 
 ## Item Viewer Configuration
 
@@ -75,13 +89,14 @@ This dialog is used to configure the appearance of tables
 <img src="https://github.com/Lyinggod/lgs-item-viewer/blob/main/images/table-configuration-dialog.jpg" width=400>
 
 - **Table Name** - By default the table name is the name of the item type.
+- **Subheader Name** - This allows for a subheader to be applied to a table. If the table set to _Group Items by Folder_ (see below) then this value defaults to the folder name.
 - **Table Message** - A HTML message placed below the table name.
 - **Grid View**
   -  Checked: Shows the table in a a grid as in the above image. Click on the row to show the item description.
   -  Unchecked: Shows only one column with all fields displayed horizontally, with the description as the last element.
--  **Group Items by folder**: Subdivides tables based on folder source. This causes table name to default back to item type.
+-  **Group Items by folder**: A single table is normally created for type such as "weapon" or "itemattachemnt". This Subdivides the tables based on top level folder source. This causes table name to default back to item type.
 -  **Hide From Players**: Hides the table from players. Collapses the table in GM view
--  **Hide Folder Name**: When using _Group Items by Folder_, the source folder is shown below the name. This hides the folder name.
+-  **Hide Folder Name**: When using _Group Items by Folder_, the source folder is shown below the name. This hides the folder name. This is retained in the even that Subheader is used to record information that the GM does not whish to be displayed.
 -  **Image Display Options**: Sets the maximum height and width of the table and its location. In grid view, image appears with description.
   - **Trim large Images**: Sets image to full size. If image is wider or taller then maximum size then it trims the left/right or bottom the image based on whether it is wider or higher then max.
 - **Move** - Change relative position of table compared to other tables in the tab. Changed _Group Items by Folder_ resets this to original position. This functions in real time.
@@ -101,7 +116,7 @@ Additionally _journal pills_ may be create that amplifying information associate
 
 Depending on the chosen methods of organization, it may be beneficial to have additional information available to the player based on the folder name or the tag as it relates to a folder. 
 
-This information is provided via Journal pills, which are buttons that will show a journal page relating to folder names or tags. 
+This information is provided via Journal pills, which are buttons that will show a dialog that contains the contents of journal page relating to folder names or tags. 
 
 In the above image, the _Gear_ button is folder note and the _Kit_ button is a tag note. Clicking the button will show the journal page relating to the button. These are assigned per table since a _Kit_ could have a different definition or description, depending on the table.
 
@@ -147,3 +162,6 @@ This module can be installed through Foundry
 Alternately
 
 Click on <a href="https://github.com/Lyinggod/lgs-item-viewer/releases">Releases</a> on the right, then, under the _Lastest Release_, right click on module.json and copy the link. Paste this link into the _Install from Manifest_ option in Forge or Foundry.
+
+## To Do
+- Attempt to add currency symbols and price range to item price without requiring a system to be defined.
