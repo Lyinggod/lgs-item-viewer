@@ -32,6 +32,10 @@ I will also consider feature requests and bug reports, including css bugs. I am 
 
 The defined fields for these system can be found in <a href="https://github.com/Lyinggod/lgs-item-viewer/tree/main/setting%20files">System Files</a>. Paste the content into the _Field Configuration_ dialog via the _Import_ button.
 
+## Recommended Modules
+
+The _Item Tags_ module, in installed uses tags for additional filtering.
+
 ## Features
 
 <img src="https://github.com/Lyinggod/lgs-item-viewer/blob/main/images/interface-map.jpg" width=800>
@@ -110,3 +114,15 @@ Example of creating journal entry for the tag _Kit_ for items in the _Kits_ Fold
 Example of creating journal entry for the folder _Melee Weapons_ for item type _weapon_ (_Group Items by Folder_ is **not** checked).
 
 - Melee Weapons (weapon)
+
+### Special Tabs
+
+If the Item Tags module is installed, the tag "hide" can be used to hide individual items from players, showing a Ban icon, next to the item, to the GM.
+
+## Installation
+
+This module can be installed through Foundry
+
+Alternately
+
+Click on <a href="https://github.com/Lyinggod/lgs-item-viewer/releases">Releases</a> on the right, then, under the _Lastest Release_, right click on module.json and copy the link. Paste this link into the _Install from Manifest_ option in Forge or Foundry.
