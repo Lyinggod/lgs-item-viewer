@@ -84,7 +84,7 @@ Folder in compendiums are used to assist in filtering display
 
 **Table Configuration**
 
-This dialog is used to configure the appearance of tables
+This dialog is used to control the appearance and positioning tables relative to each other.
 
 <img src="https://github.com/Lyinggod/lgs-item-viewer/blob/main/images/table-configuration-dialogs.jpg" width=400>
 
