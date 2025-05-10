@@ -78,7 +78,11 @@ Folder in compendiums are used to assist in filtering display
   - Drag and drop can be used to re-order folders within the level. Example _Armor_ and _Weapons_ can be re-ordered but cannot be moved outside of _Adventurer_.
 5. **Filter by Folder** - check to see only items contain in that folder
 6. **Filter by Tag** - If using the _Item Tags_ module, the tags will appear here.
-7. **Live Search Field** - Searches items display from filaters as you type using partial word match. Searching "Cat" "_Cat_ch". Multiple words can be used; e.g. "magic sword"
+7. **Live Search Field** - Searches items display from filters as you type using partial word match. Searching "Cat" "_Cat_ch". Multiple words can be used; e.g. "magic sword".
+   - _column_name:value <optional_text>_ search _column_name_ for the value and <optional_text> to further limit search.
+   - _column_name:"valueX,valueY" <optional_text>_ search _column_name_ for the values of _valueX_ or _valueY" in a table and <optional_text> to further limit search. List is quotes may be spaces or commas.
+   - _column_name_ may the initial letters of the column name.
+   - Example: _enc:2_ searches column "Encumbrance" for values of 2. _enc:"2,4"_ searchs "Encumbrance" for values of either 2 or 4. _enc:"2 4" sword_ search for rows that contain "sword" which have encumbrance of 2 or 4.
 8. **Table Hidden From Player** - Player hidden tables are collapsed and still accessible by the GM. This is set in #2.
 9. **Item Icon** - Click to view sheet or drag to actor. Dragging Journals and non-actor compatible items will have not affect.
 
