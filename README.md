@@ -51,7 +51,8 @@ To request that your system be added to the viewer, submit a ticket that include
 I will also consider feature requests and bug reports, including css bugs. I am unlikely to consider an overhaul just to match a systems asthetics or visual theme.
 
 ### Currently Defined Systems
-- FFG Star Wars
+- FFG Star Wars / Genesys
+- Genesys with Wealth rules from Unseen World.
 - Conan 2d20
 
 The defined fields for these system can be found in <a href="https://github.com/Lyinggod/lgs-item-viewer/tree/main/setting%20files">System Files</a>. Paste the content into the _Field Configuration_ dialog via the _Import_ button.
