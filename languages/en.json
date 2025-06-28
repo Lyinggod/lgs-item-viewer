@@ -1,0 +1,42 @@
+{
+  "lgs-item-viewer": {
+    "settings": {
+      "tabConfig": {
+        "name": "Configure Item Viewer",
+        "label": "Configure Item Viewer",
+        "hint": "Configure item viewer tabs"
+      },
+      "fieldConfig": {
+        "name": "Define Fields",
+        "label": "Define Fields",
+        "hint": "Define item fields"
+      }
+    },
+    "dialogs": {
+      "tabConfig": {
+        "title": "Tab Configuration",
+        "save": "Save",
+        "cancel": "Cancel",
+        "tabName": "Tab Name",
+        "tabSource": "Tab Source"
+      },
+      "fieldConfig": {
+        "title": "Configure Fields",
+        "save": "Save",
+        "cancel": "Cancel",
+        "addItemType": "Add Item Type",
+        "itemType": "Item Type",
+        "fieldName": "Field Name",
+        "objectPath": "Object Path"
+      },
+      "itemViewer": {
+        "title": "Item Viewer",
+        "noCompendiums": "No compendiums found in folder"
+      }
+    },
+    "notifications": {
+      "tabSaved": "Tab configuration saved",
+      "fieldSaved": "Field configuration saved"
+    }
+  }
+}

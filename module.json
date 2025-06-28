@@ -1,0 +1,35 @@
+{
+  "id": "lgs-item-viewer",
+  "title": "Lyinggods Item Viewer",
+  "description": "View items from compendiums in an organized manner",
+  "version": "1.0.4",
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12",
+    "maximum": "12"
+  },
+  "authors": [
+    {
+      "name": "Lyinggod"
+    }
+  ],
+  "esmodules": [
+    "scripts/lgs-item-viewer.js"
+  ],
+  "styles": [
+    "styles/lgs-item-viewer.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "languages/en.json"
+    }
+  ],
+  "flags": {
+    "allowBugReporter": true
+  },
+  "url": "https://github.com/Lyinggod/lgs-item-viewer/",
+  "manifest": "https://github.com/Lyinggod/lgs-item-viewer/releases/download/v1.0.4/module.json",
+  "download": "https://github.com/Lyinggod/lgs-item-viewer/releases/download/v1.0.4/lgs-item-viewer.zip"
+}

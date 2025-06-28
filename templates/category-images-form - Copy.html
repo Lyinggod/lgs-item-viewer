@@ -1,0 +1,113 @@
+<form>
+  <style>
+/* Header row */
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.category-label, .path-label {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Input and Image Preview Row */
+.category-entry {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.category-field, .path-field {
+  display: flex;
+  align-items: center;
+}
+
+/* Set the Category field width to 75px */
+.category-field {
+  width: 75px;
+  margin-right: 5px;
+}
+
+.path-field {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* Image Preview and Button */
+.path-field input {
+  flex: 1;
+}
+
+.path-field .image-preview {
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 25px;
+  height: 25px;
+}
+
+.path-field button {
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.path-field button i {
+  font-size: 16px;
+}
+
+.category-field input {
+  width: 175px !important;
+}
+
+/* Style for the delete button */
+.path-field .delete-category {
+  color: red;
+  margin-left: 5px;
+}
+
+.category-label {
+	max-width: 175px;
+}
+
+</style>
+<b>Instructions:</b> Assign category image to catalog items. Enter folder name that the item is stored in and then select an image. Recommend using SVG or 25-30px image.
+  <div id="categories-container">
+    <!-- Header row for "Category" and "Path" -->
+    <div class="form-group category-header">
+      <div class="category-label">
+        <label>Category</label>
+      </div>
+      <div class="path-label">
+        <label>Path</label>
+      </div>
+    </div>
+
+    {{#each categories}}
+      <div class="form-group category-entry" data-index="{{@index}}">
+        <div class="category-field" style="max-width: 175px">
+          <input type="text" name="categories.{{@index}}.category" value="{{this.category}}" />
+        </div>
+        <div class="path-field" style="max-width: 300px">
+          <input type="text" name="categories.{{@index}}.path" value="{{this.path}}" />
+          <img class="image-preview" src="{{#if this.path}}{{this.path}}{{else}}icons/svg/mystery-man.svg{{/if}}" alt="Image Preview" />
+          <button type="button" class="image-picker"><i class="fas fa-image"></i></button>
+          <button type="button" class="delete-category"><i class="fas fa-ban"></i></button>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+
+  <div class="form-group">
+    <button type="button" class="add-category">Add Category</button>
+  </div>
+  <div class="form-group">
+    <button type="submit">Save</button>
+  </div>
+</form>

@@ -1,0 +1,62 @@
+<h2>Lyinggod's Item Enhancements</h2>
+<p><strong>Instructions</strong>:</p>
+<p>This module is optimized to be used with the <em>Item Tags</em> module and provides a variety of options that improve how items interact with the actors (PCs and NPCs) and the player, as described below. It also provides tweaks to the <em>Furukai's Simple Crafting</em> module by allowing the use of difficulty codes in the receipe names.</p>
+<h3><strong>Species and Career Improvements</strong></h3>
+<p>Items may be assigned by Species and Careers to actors. This is done via an additional red bar that can be found in Species under the <em>Talents</em> tab and on Careers under the <em>Career Data</em> tab. A list of assigned items will appear below this bar. Click on the <em>Items (+)</em> in the red bar to display the <em>Item Assignment</em> dialog.</p>
+<p><strong>Adding Items to a Species or Career</strong></p>
+<ul>
+    <li>Items assigned to boxes in the Assignment Dialog will be automatically created on the actor (if they are normally allowed on an actor) when the career or species is dropped on the actor.</li>
+    <li>Boxes in the Assignment Dialog that include an <strong>or</strong> option will result in a dialog being shown when the Career/Species is dropped on an actor, prompting the user to select from item choices.</li>
+    <li>In the Assignment dialog, drop any item or the <strong>or </strong>button on one of the squares. The <strong>or</strong> button defines groupings based on the position of the <strong>or </strong>within a box. This includes talents and abilities.</li>
+    <li>Items can be moved between boxes.</li>
+    <li>Re-order items within a box by dragging and dropping items within the same box, in which case the item will move to the right most position in a box.</li>
+    <li>Right click to delete an item.</li>
+    <li>Click <em>Save </em>to store item positions.</li>
+    <li><strong>Note</strong>: Native functionality for assigning Talents and Abilities should be used when possible.</li>
+</ul>
+<p><strong>Talent and Abilities on NPCs</strong></p>
+<p>This module will add talents and abilities if dropped on a NPC. These should be assigned using the default method of assigned these and not the previously described method.</p>
+<p><strong>Assigned Currency</strong></p>
+<p>An item with a name of "1d100+5 credits" or "500 credits" will assign a random or fixed number of currency to the actor (except minions). This item won't be created on the actor. <strong>Note</strong>: The word "credits" is required.</p>
+<h3><strong>Catalog Viewer</strong></h3>
+<p>When first installed, the module creates a compendium folder called “Catalog Viewer Compendiums”. Any compendiums of item type or actor type can be placed in the folder and will appear in the viewer. However, the viewer will only show actors that are vehicles, rivals, or minions. </p>
+<p>When a table is created, click on the line to see the description of the item.</p>
+<p><strong>Organizing Compendiums</strong></p>
+<p>When placing items in compendiums, they must be placed in a folder as the folders are used by the viewer for navigation. Items that are not in folders may not appear correctly in the viewer. Folder names should reflect the general contents of the folder.</p>
+<p><strong>Groups Section</strong></p>
+<p>This section of the viewer contains a list of checkboxes of the item types that are present in the compendiums. Minions and Rivals will appear in a single item type "Special" (see below).</p>
+<p><strong>Category Tags Section</strong></p>
+<p>For each checkbox in Groups that is checked, a tag block of checkboxes will be created. The checkboxes are used to filter the visible items in their respective tables. The checboxes in the blue area are the folders the items were placed in. Below the blue area will be checkboxes with any tags that were defined in the <em>Item Tags</em> module.</p>
+<p><strong>Item Tables</strong></p>
+<p>Each type of item will appear on the left side of the viewer in its own table. This means that if there are 2 compendiums with "gear" type items in them, they will all appear under one table. Each table will have a header identifying its item type.</p>
+<p><strong>Purchasing Items</strong><br>Items may be purchased by clicking on the shopping cart next to each item. Players will have the option to be their assigned character for the item being purchased. If purchasing a minion, rival or vehicle, players will have the option of having the purchase created on their character sheet as gear item or the in actor tab with the character's name as a prefix; ie if Dragmar buys a wagon it will appear as Dragmar's Wagon.</p>
+<p>Alternately, the icon/text to the left of the shopping cart may be used to drag an item to the character sheet without purchase. This option will not work for minions, rivals, or vehicles.</p>
+<p><strong>Updating Items</strong></p>
+<p>Clicking on the item button (to the left of the shopping cart) will display the item sheet. This is the same as opening the item from the compendium. If an item's sheet is updated, the group checkbox must be unclicked and re-clicked to see the update.</p>
+<p>When adding folders inside button compendiums or adding new compendiums to the button folders, the game will need to be refreshed.</p>
+<h3><strong>Additional Configuration</strong></h3>
+<p>When the module is activated the journal "Catalog Viewer Journal" is created. This journal is used to add supplemental information to the table header (based on item type) or folder based checkboxes in the <em>Tag List</em> section.</p>
+<p>To add additional information to tables or categories (these are the same as the folder names), create a page with the name of the button (ie Equipment) with a page level of 1 (without page content). This must be followed immediately by a page with the name of the group (ie Gear) or folder/tag name (ie Laser Pistols), which may be of page level of 2 or 3. These last 2 types should have content. Group names will appear at the top of their table. Tags/folder names will appear with a "(+)" next to name and, when clicked, will display the contents below the tag. Tag/folder content only applies to the blue area.</p>
+<p><br><strong>Example</strong><br>Equipment (level 1 page, this is the button name)<br>— Gear (level 2 page, this is optional.)<br>—— Laser Pistols (level 3 page, this is optional)<br>Vehicles (level 1 page, a different button)</p>
+<p><strong>Hiding Items</strong></p>
+<p>Specific items can be hidden from a player by giving it a tag with the text of "hide". Entire groups can be hidden from players by adding "(-)" to folder name. For the GM, hidden items/groups will be identified next to the item name.</p>
+<h3><strong>Additional Configuration</strong></h3>
+<p>The following may be configured under <em>Configuration Settings</em>.</p>
+<h3><strong>Configuring Buttons</strong></h3>
+<p>Up to item 3 buttons can be created. When a button is provided a name, the button will appear on refresh and a folder will created with the of "ButtonName Compendiums".</p>
+<p><strong>Images for Item identification</strong></p>
+<p>Items may be identified by the folder name with graphic by clicking on the <em>Catalog Category Images</em> button. In this section, enter a folder name and assign a image. This can be used to help identify items at a glance in the viewer. The default value can also be assigned to include options from Font Awesome.</p>
+<p><strong>Special Category Name</strong></p>
+<p>These are collectively minions and rivals. In some settings they may be purchased perhaps a golems or drones. This options allows for the renaming of item type "Special" to be thematically relativant.</p>
+<p>The <em>Catalog Viewer</em> is accessible via buttons at the bottom of the Compendiums. By default, there is one button with the name of “Catalog Viewer”. <br>In the compendium <em>Lyinggods Macros</em> is macro <em>Catalog Viewer</em>. It can be run from the folder, hot bar, or from the buttons at the bottom of the compendium.</p>
+<p>The three buttons are associated with 3 folders which are created by the default; <em>Character Compendiums</em> folder, <em>Equipment Compendiums</em> folder, and <em>Vehicle Compendiums</em> folder. These can be turned off in <em>Configure Settings</em>. </p>
+<p><strong>Updating Items</strong></p>
+<p>Items that are updated by opening the item via the Catalog Viewer interface will need to have their <em>Group </em>checkbox toggle to see changes in the the table.</p>
+<p><strong>Hiding Items from Players</strong></p>
+<p>Individual Items can be hidden from players by placing a “hide” tag (Item Tags module) on the item. To hide an entire folder from the players, add “(-)” to the name of the folder in the compendium. The GM will see an identifier on an item to show if an item is hidden or part of a hidden category.</p>
+<p></p>
+<p><strong>Limitations</strong></p>
+<ul>
+    <li>Deleting a career or species will not delete items assigned by this module.</li>
+    <li>This module uses references to items. Do not change the location of an item once the object is assigned to the species or career via the Item Assigner dialog.</li>
+</ul>

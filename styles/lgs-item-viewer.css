@@ -1,0 +1,888 @@
+/* General Dialog Styling */
+.item-viewer-dialog {
+  min-width: 800px;
+  min-height: 600px;
+}
+.item-viewer-dialog .window-content {
+  padding: 8px;
+  overflow: hidden;
+}
+/* Tabs Styling */
+#GenesysItemViewer #headerTabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding-bottom: 0;
+  /*overflow-x: auto;*/
+}
+#GenesysItemViewer .item-viewer-tab {
+  padding: 8px 15px;
+  margin: 0 2px -1px 0;
+  border: 1px solid #ddd;
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  white-space: nowrap;
+}
+#GenesysItemViewer .item-viewer-tab.active {
+  background-color: #fff;
+  border-bottom: 1px solid #fff;
+  font-weight: bold;
+}
+/* Display Options Section */
+#GenesysItemViewer #displayOptions {
+  display: flex;
+  align-items: center;
+  /*margin-bottom: 10px;
+  padding: 8px;*/
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+}
+#GenesysItemViewer .search-container {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+#GenesysItemViewer .search-container label {
+  margin-right: 5px;
+  font-weight: bold;
+}
+#GenesysItemViewer .search-container input {
+  width: 250px;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+#GenesysItemViewer .display-options-container{
+	display: flex; 
+	align-items: center; 
+	gap: 10px;
+}
+
+#GenesysItemViewer .journal-pill-button {
+  display: inline-block;
+  background-color: #e0e0e0;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 1px 8px;
+  margin: 2px;
+  font-size: 0.85em;
+  cursor: pointer;
+  line-height: 1.2;
+  white-space: nowrap;
+  width: auto;
+  min-width: min-content;
+}
+
+#GenesysItemViewer .journal-tag-pill-button {
+  display: inline-block;
+  background-color: #e8f0fe;
+  border: 1px solid #4a86e8;
+  color: #4a86e8;
+  border-radius: 12px;
+  padding: 1px 8px;
+  margin: 2px;
+  font-size: 0.85em;
+  cursor: pointer;
+  line-height: 1.2;
+  white-space: nowrap;
+  width: auto;
+  min-width: min-content;
+}
+
+
+/* Columns Layout */
+#GenesysItemViewer .viewer-columns {
+  display: flex;
+  /* height: calc(100% - 80px); */
+  height: 645px; /* Reduced to accommodate displayOptions */
+  gap: 10px;
+  overflow: hidden;
+}
+#GenesysItemViewer #leftColumn {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+#GenesysItemViewer #rightColumn {
+  width: 200px;
+  overflow-y: auto;
+  border-left: 1px solid #ddd;
+  padding-left: 10px;
+}
+/* Item Tables Styling */
+#GenesysItemViewer .item-type-table {
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+}
+#GenesysItemViewer .item-type-table td {
+  padding: 6px;
+  border: 1px solid #ddd;
+}
+#GenesysItemViewer .item-type-table tr:first-child td {
+   background-color: rgb(0 230 255 / 3%);
+}
+#GenesysItemViewer .item-type-table .first-row {
+  /* cursor: pointer; */
+  vertical-align: top;
+}
+#GenesysItemViewer .item-type-table .first-row:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+#GenesysItemViewer .item-type-table .second-row td {
+  /*background-color: #fafafa;*/
+  padding: 10px;
+}
+/* Background colors for alternating rows */
+#GenesysItemViewer .item-type-table .first-row.bg-alternate, 
+#GenesysItemViewer .item-type-table .second-row.bg-alternate {
+  background-color: rgba(165, 42, 42, 0.1); /* Brown with 20% transparency */
+}
+
+/* 
+  NOTE: The '.status-toggle' selector is generic and its origin could not be found 
+  in the provided files. It is left unscoped but may cause conflicts.
+*/
+.status-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: #666;
+  width: 17px;
+}
+.status-toggle:hover {
+  color: #000;
+}
+
+.tab-config-dialog .window-content {
+  padding: 10px;
+  overflow-y: auto;
+}
+.tab-config-dialog .tab-configuration {
+  min-width: 400px;
+}
+.tab-config-dialog .form-header {
+  margin-bottom: 10px;
+}
+.tab-config-dialog .header-row {
+  display: flex;
+  font-weight: bold;
+  border-bottom: 2px solid #ddd;
+  padding-left:30px;
+}
+.tab-config-dialog .header-cell {
+  flex: 1;
+  padding: 0px;
+}
+.tab-config-dialog .header-cell:last-child {
+  flex: 0 0 50px;
+  text-align: center;
+}
+
+.tab-config-dialog .tabButtons {
+	flex: 1;
+	display:flex;
+	padding-bottom: 5px;
+}
+
+.tab-config-dialog .tabButtons .header-cell{
+	flex: 1;
+	display:flex;
+	padding-bottom: 5px;
+
+}
+
+.tab-config-dialog .tab-rows {
+  overflow-y: visible;
+}
+.tab-config-dialog .tab-row {
+  display: flex;
+  border-bottom: 1px solid #eee;
+  cursor: move;
+}
+.tab-config-dialog .tab-row:hover {
+  background-color: #f9f9f9;
+}
+.tab-config-dialog .row-cell {
+  flex: 1;
+  padding: 5px;
+}
+.tab-config-dialog .row-cell:last-child {
+  flex: 0 0 50px;
+  text-align: center;
+}
+.tab-config-dialog .tab-row input {
+  width: 100%;
+}
+
+/* Scoping .add-button to its parent dialogs */
+.tab-config-dialog .add-button,
+.field-config-dialog .add-button {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 3px 8px;
+}
+
+/* Scoping delete buttons to their parent dialogs */
+.field-config-dialog .delete-type-button,
+.field-config-dialog .delete-field-button,
+.tab-config-dialog .delete-tab-button {
+  color: #c33;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#GenesysItemViewer .showItemButton{
+	width:50px;
+	vertical-align: top
+}
+
+#GenesysItemViewer .singleCellCat{
+	font-weight: bold;
+}
+
+#GenesysItemViewer .itemNameCombinedView{
+	font-weight: bold;
+	font-size: 15px;
+}
+
+#GenesysItemViewer .itemCategoryHeader, 
+#GenesysItemViewer .itemCategoryHeader td, 
+#GenesysItemViewer .itemCategoryHeader p{
+	margin: 0px;
+	padding: 0px;
+}
+
+#GenesysItemViewer .genesysStatTable {
+	width:500px!important;
+}
+
+#GenesysItemViewer .genesysTables {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#GenesysItemViewer .genesysSubStatTable {
+	width:300px!important;
+}
+
+#GenesysItemViewer .genesysSpeciesAttributes th{
+	text-align: center;
+	border: 1px solid #000;
+
+}
+
+#GenesysItemViewer .genesysSpeciesAttributes td{
+	text-align: center;
+	width: 100px;
+	border: 1px solid #000;
+
+}
+
+#GenesysItemViewer .abilityHeader{
+	font-weight: bold;
+	text-decoration: underline
+}
+
+/* configure images displayed in items*/
+/* this is supposed to crop the image if > 400 height so width is max of 400*/
+#GenesysItemViewer .item-type-tablex .profile-image-cutoff {
+    /* max-width: 400px;*/
+    /*max-height: 400px;*/
+    width: 400px;
+    height: 400px;
+	float: right;
+    object-fit: cover;
+    object-position: top;
+}
+
+#GenesysItemViewer .item-type-tablex .profile-img-icon {
+	height: 40px;
+    padding-right: 10px;
+    border: 0px;
+	float:right;
+}
+
+#GenesysItemViewer .item-type-tablex .profile-img-400high {
+	max-height: 400px;
+    float: right;
+}
+
+#GenesysItemViewer .item-type-tablex .profile-img-400wide {
+	max-width: 400px;
+    float: right;
+}
+
+/* Base container for image, allows margin/padding */
+#GenesysItemViewer .item-image-container {
+  /* display: inline-block; /* Or block, depending on desired flow */
+  flex-shrink: 0; /* Prevent image container from shrinking in flex layouts */
+  /* Add margins based on location later if needed */
+  overflow: hidden; /* Needed for trim, but also prevents accidental overflow */
+  position: relative; /* Context for potential absolute positioned elements inside if needed */
+}
+
+/* Style for the image itself */
+#GenesysItemViewer .item-viewer-image {
+  display: block; /* Prevents extra space below image */
+  /* max-height and max-width are now set inline via JS */
+  /* Ensure image scales correctly within its container */
+  height: auto;
+  width: auto;
+  object-fit: contain; /* Scales image while preserving aspect ratio within container bounds */
+}
+
+/* Trimming style - Applied to the container */
+#GenesysItemViewer .item-image-container.image-container-trim {
+   /* overflow: hidden; is already on base container */
+   /* The fixed height/width are applied inline via JS */
+}
+
+#GenesysItemViewer .item-image-container.image-container-trim .item-viewer-image {
+  /* When trimming, we want the image at actual size but clipped by the container */
+  max-height: none; /* Override max-height */
+  max-width: none;  /* Override max-width */
+  width: auto;      /* Allow image to take its natural width */
+  height: auto;     /* Allow image to take its natural height */
+  object-fit: cover; /* Might be needed depending on exact trim behaviour desired, covers container */
+  object-position: top center; /* Show top part if height overflows */
+}
+
+
+/* --- Table Cell Layout for Image Positioning --- */
+
+/* Base style for the wrapper div */
+#GenesysItemViewer .item-details-wrapper {
+  display: flex;
+  gap: 10px; /* Space between image and text */
+  padding: 0px; /* Let the TD handle padding, or add padding here if needed */
+  vertical-align: top; /* Default align items to top */
+  width: 100%; /* Ensure wrapper takes full width of the TD */
+}
+
+/* Base style for the table cell containing image and text */
+#GenesysItemViewer .item-details-cell {
+  display: flex;
+  gap: 10px; /* Space between image and text */
+  padding: 5px; /* Padding inside the cell */
+  vertical-align: top; /* Align items to the top by default */
+}
+
+/* Text content wrapper */
+#GenesysItemViewer .item-details-text {
+  flex-grow: 1; /* Allow text to take remaining space */
+  min-width: 0; /* Important for flexbox text wrapping */
+}
+
+/* Location: Image Left (Default Flex Direction: row) */
+#GenesysItemViewer .item-details-wrapper.image-location-left {
+  flex-direction: row;
+  align-items: flex-start; /* Align items at the start (top) of the cross axis */
+}
+/* Order is default (image first because it comes first in HTML) */
+
+/* Location: Image Right */
+#GenesysItemViewer .item-details-wrapper.image-location-right {
+  flex-direction: row-reverse; /* Reverse the order */
+  align-items: flex-start; /* Align items at the start (top) of the cross axis */
+}
+#GenesysItemViewer .item-details-wrapper.image-location-right .item-image-container {
+  /* Optional: Add margin if gap isn't sufficient */
+  /* margin-left: 10px; */
+}
+
+/* Location: Image Top */
+#GenesysItemViewer .item-details-wrapper.image-location-top {
+  flex-direction: column; /* Stack vertically */
+  align-items: center; /* Center items horizontally */
+}
+/* Order is default (image first) */
+#GenesysItemViewer .item-details-wrapper.image-location-top .item-details-text {
+   width: 100%; /* Ensure text takes full width */
+   text-align: center; /* Optional: center text below image */
+}
+#GenesysItemViewer .item-details-cell.image-location-top .item-image-container {
+  /* Optional: Add margin if gap isn't sufficient */
+  /* margin-bottom: 10px; */
+}
+
+.lgs-item-viewer-config .imageDisplayOptions .indent {
+	padding-left:35px;
+}
+
+.lgs-item-viewer-config .imageDisplayOptions .imageInput {
+	padding-top:5px;
+}
+
+.lgs-item-viewer-config .imageDisplayOptions .label-img-max-width{
+	padding-right:5px;
+}
+
+.lgs-item-viewer-config .imageDisplayOptions .span-3 {
+	margin-left:-5px;
+}
+
+[id^="table-message-editor-dialog-"] .dialog-buttons {
+ display: none!important;
+}
+
+/* Location: Image Bottom */
+#GenesysItemViewer .item-details-wrapper.image-location-bottom {
+  flex-direction: column-reverse; /* Stack vertically, reversed order */
+  align-items: center; /* Center items horizontally */
+}
+#GenesysItemViewer .item-details-wrapper.image-location-bottom .item-details-text {
+   width: 100%; /* Ensure text takes full width */
+   text-align: center; /* Optional: center text above image */
+}
+#GenesysItemViewer .item-details-cell.image-location-bottom .item-image-container {
+  /* Optional: Add margin if gap isn't sufficient */
+  /* margin-top: 10px; */
+}
+
+/* --- Specific Styles for Collapsed View --- */
+#GenesysItemViewer .item-type-table[data-status="-"] .item-details-cell {
+    /* Potentially adjust gap or alignment specifically for collapsed view */
+    /* Example: align-items: center; */
+}
+
+#GenesysItemViewer .item-type-table[data-status="-"] .item-details-text .itemNameCombinedView {
+    font-weight: bold;
+    display: block; /* Ensure it takes its own line if needed */
+}
+
+/* --- Specific Styles for Grid View's Second Row --- */
+#GenesysItemViewer .item-type-table[data-status="+"] .second-row .item-details-cell {
+    /* Ensure padding works well, maybe adjust alignment */
+    align-items: flex-start; /* Align top is usually best for descriptions */
+}
+
+#GenesysItemViewer section .secret{
+	display: none;
+}
+
+#GenesysItemViewer details .detail {
+	padding-left: 20px;
+}
+
+#GenesysItemViewer .tableHeader{
+	font-weight: bold;
+	font-size:20px
+	
+}
+
+#GenesysItemViewer .profile-div {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* Ensure there's enough space for all content */
+  /* min-height: 150px;*/ /* Adjust based on your content */
+}
+
+/* Create a container for the spans and other text content */
+#GenesysItemViewer .profile-div > :not(.profile-img) {
+  order: 1; /* Display text content first */
+  position: relative; /* Keep text above the image */
+  z-index: 2;
+}
+
+/* Position the image at the bottom */
+#GenesysItemViewer .profile-div .profile-img {
+  order: 2; /* Display image last */
+  margin-top: auto; /* Push the image to the bottom */
+  align-self:  center; /* Align to the left by default */
+  max-width: 100%; /* Ensure image doesn't overflow the cell */
+  position: relative;
+  z-index: 1; /* Keep image behind the text */
+  max-height: 150px;
+}
+
+/* end display images in items*/
+
+#GenesysItemViewer .first-row table:not(.descriptionTable), 
+#GenesysItemViewer .second-row table:not(.descriptionTable), 
+#GenesysItemViewer .profile-div table:not(.descriptionTable) {
+	width: 80%;
+	align-self: center;
+}
+
+#GenesysItemViewer .tag-filters{
+	padding-top: 10px;
+}
+
+#GenesysItemViewer .tagFilterText{
+	position: relative;
+	top: -5px;
+}
+
+#GenesysItemViewer .tag-filter-item, 
+#GenesysItemViewer .folder-filter-item{
+	margin-top: -5px;
+	margin-bottom: -5px;
+}
+
+.field-config-dialog .buttonOptions {
+    display: flex; /* Align buttons in a row */
+    gap: 6px; /* Add spacing between buttons */
+    float: right; /* Maintain the existing float:right */
+}
+
+.field-config-dialog .buttonOptions button {
+    /* width: auto; 
+    padding: 5px; 
+    min-width: calc(100% + 10px); 
+	*/
+    white-space: nowrap; 
+}
+
+/* Utility classes - scoped to all relevant dialogs */
+#GenesysItemViewer .dragging,
+.tab-config-dialog .dragging,
+.field-config-dialog .dragging {
+  opacity: 0.5;
+}
+#GenesysItemViewer .drag-over,
+.tab-config-dialog .drag-over,
+.field-config-dialog .drag-over {
+  border: 2px dashed #4b8;
+}
+
+.field-config-dialog .window-content {
+  padding: 10px;
+  overflow-y: auto;
+}
+.field-config-dialog .field-configuration {
+  min-width: 500px;
+}
+.field-config-dialog #add-item-type-button {
+  margin-bottom: 0px;
+  width: auto;
+}
+.field-config-dialog .item-type-container {
+  overflow-y: visible;
+}
+.field-config-dialog .item-type-section {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: rgba(230, 230, 230, 0.5)
+}
+.field-config-dialog .item-type-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  border-bottom: 1px solid #eee;
+}
+.field-config-dialog .type-name-container {
+  flex: 1;
+}
+.field-config-dialog .type-actions {
+  display: flex;
+  gap: 5px;
+}
+.field-config-dialog .field-rows {
+  /* margin-left: 15px; */
+  overflow-y: visible;
+}
+.field-config-dialog .field-row {
+  display: flex;
+  margin-bottom: -7px;
+  align-items: center;
+  cursor: move;
+  border: 1px solid transparent;
+  padding-left:15px;
+}
+.field-config-dialog .field-row:hover {
+  background-color: #f9f9f9;
+}
+.field-config-dialog .field-cell {
+  flex: -1;
+  padding: 3px;
+}
+.field-config-dialog .field-cell:last-child {
+  flex: 0 0 40px;
+  text-align: center;
+}
+
+/* Configure note area for items*/
+#GenesysItemViewer .allNotes {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#GenesysItemViewer .journalNotes, 
+#GenesysItemViewer .journalTags {
+    width: 50%;
+}
+
+#GenesysItemViewer .journalNotes, 
+#GenesysItemViewer .allNotes span{
+	padding-left:3px;
+	padding-right: 3px;
+}
+
+#GenesysItemViewer .journalNotes {
+    text-align: left;
+}
+
+#GenesysItemViewer .journalTags {
+    text-align: right;
+}
+
+#GenesysItemViewer .journal-content-display p {
+    text-align: left;
+}
+
+#GenesysItemViewer .journal-label {
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+  font-weight: normal;
+  transition: all 0.2s ease;
+  user-select: none;
+  flex: 0 0 auto;
+  padding-left: 0;
+  text-indent: 0;
+}
+
+#GenesysItemViewer .journal-label:hover {
+  color: #782e22;
+}
+
+#GenesysItemViewer .journal-label.active {
+  font-weight: bold;
+  color: #782e22;
+}
+
+/* Journal Content Container */
+#GenesysItemViewer .journal-content-container {
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin: 5px 0 10px 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Style for triangle pointers */
+#GenesysItemViewer .journal-label::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: -2px;
+  margin-right: 4px;
+  transition: transform 0.3s ease;
+}
+
+#GenesysItemViewer .journal-label.active::before {
+  transform: rotate(90deg);
+}
+
+/* Animation for triangle when toggling */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(90deg); }
+}
+
+#GenesysItemViewer .journal-label.spinning::before {
+  animation: spin 0.3s ease forwards;
+}
+
+/* Item Categories Styling */
+#GenesysItemViewer .itemCategoryHeader {
+    /* background-color: rgba(255, 0, 0, 0.2);*/
+    cursor: default;
+    vertical-align: top;
+}
+
+#GenesysItemViewer .itemCategoryHeader .table-config-button {
+    position: absolute;
+    top: 0.25rem; /* adjust as needed */
+    right: 0.5rem; /* adjust if you want it aligned right */
+}
+
+#GenesysItemViewer .itemCategoryHeader td {
+    position: relative;
+}
+
+#GenesysItemViewer .itemCategoryHeader p {
+  margin: 5px 0;
+  font-size: 1.1em;
+}
+
+/* Table configuration button */
+#GenesysItemViewer .table-config-button, 
+#GenesysItemViewer .folder-drag-toggle {
+  float: right;
+  background: none;
+  border: 0px ;
+  border-radius: 3px;
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+  cursor: pointer;
+  top:-3px;
+  position: relative;
+}
+
+/* position buttons in Table Configuration dialog*/
+.lgs-item-viewer-config .move-group {
+    display: flex;
+    align-items: center;
+	padding-bottom: 10px;
+}
+
+.lgs-item-viewer-config .move-label {
+    margin-right: 10px; /* Ensures the label is close to the buttons */
+    white-space: nowrap; /* Prevents wrapping */
+}
+
+.lgs-item-viewer-config .table-position-buttons {
+    display: flex;
+    gap: 5px; /* Creates space between the buttons */
+}
+
+.lgs-item-viewer-config .move-button {
+    width: 38px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	padding-left:9px;
+}
+
+.tab-config-dialog .tab-row {
+  display: flex;
+  flex-direction: column; /* Stack input group and textarea vertically */
+  border: 1px solid #ccc;
+  padding: 8px;
+  margin-bottom: 8px;
+  background-color: rgb(249 249 249 / 35%);
+  border-radius: 4px;
+  align-items: stretch; /* Make children stretch */
+}
+
+.tab-config-dialog .row-cell {
+  margin-bottom: 5px; /* Add some space between inputs and textarea */
+}
+
+.tab-config-dialog .row-cell:last-child {
+  margin-bottom: 0;
+}
+
+.tab-config-dialog .input-group {
+  display: flex;
+  align-items: center; /* Align items vertically in the input group */
+  gap: 10px; /* Space between inputs and button */
+}
+
+.tab-config-dialog .input-group input[type="text"] {
+  flex-grow: 1; /* Allow inputs to take available space */
+  min-width: 150px; /* Ensure inputs have a minimum width */
+}
+
+.tab-config-dialog .textarea-group {
+  width: 100%; /* Make textarea group take full width */
+}
+
+.tab-config-dialog .textarea-group textarea {
+  width: 100%; /* Make textarea fill its container */
+  box-sizing: border-box; /* Include padding and border in width */
+  min-height: calc(1.5em * 8); /* Set min-height based on rows attribute */
+  resize: vertical; /* Allow only vertical resizing */
+}
+
+/* Style for dragging */
+.tab-config-dialog .tab-row.dragging {
+  opacity: 0.5;
+  border: 1px dashed #000;
+}
+
+/* Style for drop target */
+.tab-config-dialog .tab-row.drag-over {
+  background-color: #e0e0e0;
+  border: 1px dashed #555;
+}
+
+/* Ensure dialog width accommodates content */
+.tab-config-dialog {
+  min-width: 500px; /* Adjust as needed */
+}
+
+.tab-config-dialog .row-cell.input-group {
+  display: flex;
+  align-items: center; /* Vertically center items */
+  gap: 5px;  /* Space between elements */
+}
+
+.tab-config-dialog .row-cell.input-group input[type="text"] {
+  flex-grow: 1; /* Allow input fields to take up available space */
+}
+
+.tab-config-dialog .hide-tab-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: smaller;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+
+#GenesysItemViewer .tabMessage p:first-child {
+  margin-top: 0;
+}
+
+#GenesysItemViewer .tabMessage p:last-child {
+  margin-bottom: 0;
+}
+
+#GenesysItemViewer .tabMessage {
+    border: 1px solid #ffd9b9;
+    background-color: rgb(240 0 255 / 4%);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+#GenesysItemViewer .tabMessage .tabDataName {
+    text-align: center;
+    margin: 0;
+	font-weight: bold;
+}
+
+#GenesysItemViewer .tabMessage p {
+    text-align: left;
+    margin-top: 8px;
+}
+
+/******************************
+Configuration for custom systems
+******************************/
+
+/* affect tables in description */
+/* Then add your specific rule for descriptionTable */
+#GenesysItemViewer .descriptionTable {
+    width: auto !important; /* Use auto instead of unset for better compatibility */
+    table-layout: auto !important; /* This helps the table size to content */
+}
+
+/* Fix the center variant */
+#GenesysItemViewer .descriptionTable.center {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+#GenesysItemViewer .descriptionTable.center td, 
+#GenesysItemViewer .descriptionTable.center th {
+    text-align: center !important;
+}

@@ -1,0 +1,40 @@
+<form autocomplete="off" class="flexcol">
+
+    {{!-- This div acts as a container but the editor itself will be placed by the helper --}}
+    <div class="form-group editor-container flex-grow" style="min-height: 300px; border: 1px solid #ccc; margin-bottom: 5px; overflow: hidden; display: flex; flex-direction: column;">
+         {{!--
+           Use target="object.PROPERTY_NAME".
+           PROPERTY_NAME must match the key used in the constructor: { messageContent: message }
+           The FormApplication framework handles binding this to the underlying data object.
+         --}}
+         {{editor target="object.messageContent" button=button owner=owner editable=isEditable engine="prosemirror"}}
+    </div>
+
+    {{!-- Styling remains the same --}}
+</form>
+
+{{!-- Basic styling (important for editor height) --}}
+<style>
+.lgs-item-viewer-editor form {
+    height: 100%; /* Ensure form takes full height */
+}
+.lgs-item-viewer-editor .editor-container {
+    /* Container styling - adjust as needed */
+    flex-grow: 1; /* Allow container to grow */
+}
+/* Target the ProseMirror element directly if possible for height/scrolling */
+.lgs-item-viewer-editor .editor-content .ProseMirror {
+    height: 100%;
+    min-height: 250px; /* Ensure minimum editable space */
+    overflow-y: auto;
+    background: white; /* Differentiate editor area */
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+/* Ensure the direct parent div created by the helper allows flex grow */
+.lgs-item-viewer-editor .editor-content {
+     height: calc(100% - 40px); /* Adjust based on button/toolbar height */
+     display: flex;
+     flex-direction: column;
+}
+</style>
